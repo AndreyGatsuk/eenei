@@ -21,7 +21,7 @@
     "prepare:grammars": "node scripts/prepare-grammars.js"
   },
   "devDependencies": {
-    "@vscode/vsce": "^3.7.1",
+    "@vscode/vsce": "^4.1.0",
     "vscode-oniguruma": "^2.0.1",
     "vscode-textmate": "^9.3.0",
     "js-yaml": "^4.3.2",
