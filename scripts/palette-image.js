@@ -1,4 +1,27 @@
-const { deflateSync, crc32 } = require('node:zlib');
+const { crc32 } = require('node:zlib');
+
+// Stored DEFLATE blocks avoid compressor-version differences between Node builds.
+// The strips are small enough that compression savings do not justify unstable bytes.
+function storedZlib(data) {
+  const blocks = [Buffer.from([0x78, 0x01])];
+  for (let offset = 0; offset < data.length; offset += 65535) {
+    const length = Math.min(65535, data.length - offset);
+    const header = Buffer.alloc(5);
+    header[0] = offset + length === data.length ? 1 : 0;
+    header.writeUInt16LE(length, 1);
+    header.writeUInt16LE(length ^ 0xffff, 3);
+    blocks.push(header, data.subarray(offset, offset + length));
+  }
+  let a = 1;
+  let b = 0;
+  for (const byte of data) {
+    a = (a + byte) % 65521;
+    b = (b + a) % 65521;
+  }
+  const checksum = Buffer.alloc(4);
+  checksum.writeUInt32BE(((b << 16) | a) >>> 0);
+  return Buffer.concat([...blocks, checksum]);
+}
 
 // A tiny deterministic rasterizer keeps palette builds independent of a browser.
 function palettePng(colors) {
@@ -34,7 +57,7 @@ function palettePng(colors) {
   header[9] = 6; // RGBA, eight bits per channel.
   return Buffer.concat([
     Buffer.from('89504e470d0a1a0a', 'hex'), chunk('IHDR', header),
-    chunk('IDAT', deflateSync(pixels, { level: 9 })), chunk('IEND', Buffer.alloc(0)),
+    chunk('IDAT', storedZlib(pixels)), chunk('IEND', Buffer.alloc(0)),
   ]);
 }
 module.exports = { palettePng };
