@@ -16,3 +16,38 @@ test('upstream drift and ambiguous rules stop adaptation instead of silently pro
   assert.throws(() => applyGrammarPatches(grammar, [patch]), /found 2/);
   assert.equal(grammar.patterns[0].name, 'keyword.other');
 });
+
+const { applyGrammarSourcePatches } = require('../scripts/grammar-patches');
+const sourcePatches = require('../scripts/frameworks.json').find(({ id }) => id === 'svelte')
+  .grammars.find(({ scopeName }) => scopeName === 'source.svelte').sourcePatches;
+
+test('Svelte source repair preserves injection structure and valid block mappings in strict YAML', () => {
+  const yaml = require('js-yaml');
+  const source = [
+    'scopeName: source.svelte',
+    'injections:',
+    "  'L:source.svelte':",
+    "    patterns: [{begin: '>', end: '<',",
+    '    contentName: source.js, patterns: [{ include: source.js }]}]',
+    "  'L:source.ts':",
+    '    patterns: [',
+    "      {begin: '>', end: '<', contentName: source.ts}",
+    '    ]',
+    'repository:',
+    '  expression:',
+    '    contentName: meta.embedded.expression.svelte',
+  ].join('\n');
+  const patches = sourcePatches.filter(p => !p.find.includes('text.')).map(p => ({ ...p, count: 1 }));
+  const parsed = yaml.load(applyGrammarSourcePatches(source, patches));
+  assert.deepEqual(parsed.injections['L:source.svelte'].patterns, [{
+    begin: '>', end: '<', contentName: 'source.js', patterns: [{ include: 'source.js' }],
+  }]);
+  assert.equal(parsed.injections['L:source.ts'].patterns[0].contentName, 'source.ts');
+  assert.equal(parsed.repository.expression.contentName, 'meta.embedded.expression.svelte');
+});
+
+test('source repairs stop on upstream drift and leave unrelated source intact', () => {
+  const patch = sourcePatches[0];
+  assert.throws(() => applyGrammarSourcePatches('scopeName: source.svelte', [patch]), /expected 10 matches, found 0/);
+  assert.equal(applyGrammarSourcePatches('scopeName: source.svelte'), 'scopeName: source.svelte');
+});

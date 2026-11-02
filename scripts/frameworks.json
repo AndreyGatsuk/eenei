@@ -187,7 +187,27 @@
             "meta.import string.quoted": "other",
             "variable.other.jsdoc": "other"
           }
-        }
+        },
+        "sourcePatches": [
+          {
+            "find": "\n    contentName: source.",
+            "replace": " contentName: source.",
+            "count": 10,
+            "reason": "Join under-indented Svelte injection flow-map continuations for strict YAML parsing."
+          },
+          {
+            "find": "\n    contentName: text.",
+            "replace": " contentName: text.",
+            "count": 1,
+            "reason": "Join the under-indented Pug injection flow-map continuation for strict YAML parsing."
+          },
+          {
+            "find": "\n    ]",
+            "replace": "]",
+            "count": 1,
+            "reason": "Join the under-indented closing bracket of the TypeScript injection flow sequence."
+          }
+        ]
       },
       {
         "scopeName": "source.css.postcss",

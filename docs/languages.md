@@ -38,7 +38,9 @@ Bundled support covers syntax highlighting and basic language configuration.
 The linked language extensions remain optional for completion, formatting, validation
 and framework tooling. Pinned sources and registrations are in `scripts/frameworks.json`;
 licenses and source metadata ship alongside each grammar in
-`vscode/syntaxes/frameworks/`. Run `npm run vendor:grammars` only when deliberately
+`vscode/syntaxes/frameworks/`. Svelte source patches repair under-indented YAML
+flow continuations before parsing with js-yaml 5; exact-match counts guard the
+pinned source, and the resulting grammar stays unchanged. Run `npm run vendor:grammars` only when deliberately
 refreshing those vendored files. Normal builds and framework tests use the local
 files and do not download framework grammars.
 

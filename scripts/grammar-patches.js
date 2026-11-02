@@ -17,4 +17,18 @@ function applyGrammarPatches(grammar, patches = []) {
   }
   return result;
 }
-module.exports = { applyGrammarPatches };
+// Repair exact source fragments before parsing, with guards against upstream drift.
+function applyGrammarSourcePatches(source, patches = []) {
+  let result = source;
+  for (const patch of patches) {
+    if (!patch.find) throw new Error('Grammar source patch must have a nonempty find string');
+    const parts = result.split(patch.find);
+    const count = parts.length - 1;
+    if (count !== patch.count) {
+      throw new Error(`Grammar source patch expected ${patch.count} matches, found ${count}: ${patch.reason}`);
+    }
+    result = parts.join(patch.replace);
+  }
+  return result;
+}
+module.exports = { applyGrammarPatches, applyGrammarSourcePatches };

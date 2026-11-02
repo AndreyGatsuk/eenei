@@ -3,7 +3,7 @@ const path = require('node:path');
 const textmate = require('vscode-textmate');
 const yaml = require('js-yaml');
 const frameworks = require('./frameworks.json');
-const { applyGrammarPatches } = require('./grammar-patches');
+const { applyGrammarPatches, applyGrammarSourcePatches } = require('./grammar-patches');
 
 const root = path.join(__dirname, '..');
 const extension = path.join(root, 'vscode');
@@ -22,7 +22,7 @@ async function main() {
   for (const framework of frameworks) {
     const directory = `syntaxes/frameworks/${framework.id}`;
     for (const grammar of framework.grammars) {
-      const source = await download(grammar.url);
+      const source = applyGrammarSourcePatches(await download(grammar.url), grammar.sourcePatches);
       let parsed = grammar.format === 'yaml' ? yaml.load(source) : textmate.parseRawGrammar(source, grammar.url);
       parsed = applyGrammarPatches(parsed, grammar.patches);
       if (parsed.scopeName !== grammar.scopeName) throw new Error(`Unexpected scope: ${grammar.url}`);
