@@ -1,0 +1,10 @@
+# Project preview
+
+Use **bold** and `compose.yaml`.
+
+```julia
+# Preview active projects.
+if active
+  println("eenei")
+end
+```

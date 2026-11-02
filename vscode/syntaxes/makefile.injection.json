@@ -1,0 +1,25 @@
+{
+  "scopeName": "theme-lab.injection.makefile",
+  "injectionSelector": "L:source.makefile -comment -string",
+  "patterns": [
+    {
+      "name": "meta.scope.recipe.makefile",
+      "begin": "^\\t([+\\-@]*)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.recipe.makefile"
+        }
+      },
+      "end": "(?<!\\\\)$",
+      "contentName": "meta.embedded.block.shell",
+      "patterns": [
+        {
+          "include": "source.makefile#variables"
+        },
+        {
+          "include": "source.shell"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "scopeName": "text.html.markdown.julia",
+  "patterns": [
+    {
+      "include": "text.html.markdown"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "jinja",
+  "scope": "text.html.jinja",
+  "sample": "sample.html.jinja",
+  "extension": "wholroyd.jinja",
+  "repository": "https://github.com/wholroyd/vscode-jinja",
+  "grammars": [
+    {
+      "scopeName": "text.html.jinja",
+      "url": "https://raw.githubusercontent.com/wholroyd/vscode-jinja/eda5ffe57277affc0bf3572abdc1f543ac97d868/syntaxes/jinja-html.json",
+      "format": "textmate",
+      "injectTo": [],
+      "contribution": {
+        "language": "jinja-html",
+        "scopeName": "text.html.jinja",
+        "embeddedLanguages": {
+          "source.js": "javascript",
+          "source.css": "css"
+        }
+      }
+    },
+    {
+      "scopeName": "text.yaml.jinja",
+      "url": "https://raw.githubusercontent.com/wholroyd/vscode-jinja/eda5ffe57277affc0bf3572abdc1f543ac97d868/syntaxes/jinja-yaml.json",
+      "format": "textmate",
+      "injectTo": [],
+      "contribution": {
+        "language": "jinja-yaml",
+        "scopeName": "text.yaml.jinja"
+      }
+    },
+    {
+      "scopeName": "source.jinja",
+      "url": "https://raw.githubusercontent.com/wholroyd/vscode-jinja/eda5ffe57277affc0bf3572abdc1f543ac97d868/syntaxes/jinja.json",
+      "format": "textmate",
+      "injectTo": [],
+      "contribution": {
+        "language": "jinja",
+        "scopeName": "source.jinja"
+      }
+    }
+  ],
+  "languages": [
+    {
+      "id": "jinja-html",
+      "aliases": [
+        "Jinja HTML",
+        "jinja-html"
+      ],
+      "extensions": [
+        ".html.j2",
+        ".html.jinja",
+        ".html.jinja2"
+      ],
+      "configuration": "./syntaxes/frameworks/jinja/jinja-html.language-configuration.json"
+    },
+    {
+      "id": "jinja-yaml",
+      "aliases": [
+        "Jinja YAML",
+        "jinja-yaml"
+      ],
+      "extensions": [
+        ".yml.j2",
+        ".yml.jinja",
+        ".yml.jinja2",
+        ".yaml.j2",
+        ".yaml.jinja",
+        ".yaml.jinja2",
+        ".sls"
+      ],
+      "configuration": "./syntaxes/frameworks/jinja/jinja-yaml.language-configuration.json"
+    },
+    {
+      "id": "jinja",
+      "aliases": [
+        "Jinja"
+      ],
+      "extensions": [
+        ".j2",
+        ".jinja",
+        ".jinja2"
+      ],
+      "configuration": "./syntaxes/frameworks/jinja/jinja.language-configuration.json"
+    }
+  ],
+  "configurations": [
+    {
+      "source": "https://raw.githubusercontent.com/wholroyd/vscode-jinja/eda5ffe57277affc0bf3572abdc1f543ac97d868/jinja-html.configuration.json",
+      "filename": "jinja-html.language-configuration.json"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/wholroyd/vscode-jinja/eda5ffe57277affc0bf3572abdc1f543ac97d868/jinja-yaml.configuration.json",
+      "filename": "jinja-yaml.language-configuration.json"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/wholroyd/vscode-jinja/eda5ffe57277affc0bf3572abdc1f543ac97d868/jinja.configuration.json",
+      "filename": "jinja.language-configuration.json"
+    }
+  ],
+  "licenses": [
+    {
+      "source": "https://raw.githubusercontent.com/wholroyd/vscode-jinja/eda5ffe57277affc0bf3572abdc1f543ac97d868/LICENSE",
+      "filename": "LICENSE.txt"
+    }
+  ]
+}

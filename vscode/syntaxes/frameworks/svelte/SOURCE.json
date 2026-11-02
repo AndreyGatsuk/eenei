@@ -1,0 +1,88 @@
+{
+  "id": "svelte",
+  "scope": "source.svelte",
+  "sample": "sample.svelte",
+  "extension": "svelte.svelte-vscode",
+  "repository": "https://github.com/sveltejs/language-tools",
+  "grammars": [
+    {
+      "scopeName": "source.svelte",
+      "url": "https://raw.githubusercontent.com/sveltejs/language-tools/fda3f39950e71d3371fdc9ebc811c444b8714ad4/packages/svelte-vscode/syntaxes/svelte.tmLanguage.src.yaml",
+      "format": "yaml",
+      "injectTo": [],
+      "contribution": {
+        "language": "svelte",
+        "scopeName": "source.svelte",
+        "embeddedLanguages": {
+          "text.html.basic": "html",
+          "text.html.markdown": "markdown",
+          "text.pug": "jade",
+          "meta.tag.start.svelte": "svelte-start-tag",
+          "punctuation.definition.tag.begin.svelte": "svelte",
+          "source.css": "css",
+          "source.css.less": "less",
+          "source.css.scss": "scss",
+          "source.css.postcss": "postcss",
+          "source.sass": "sass",
+          "source.stylus": "stylus",
+          "source.js": "javascript",
+          "source.ts": "typescript",
+          "source.coffee": "coffeescript"
+        },
+        "unbalancedBracketScopes": [
+          "keyword.operator.relational",
+          "storage.type.function.arrow",
+          "keyword.operator.bitwise.shift",
+          "meta.brace.angle",
+          "punctuation.definition.tag"
+        ],
+        "tokenTypes": {
+          "punctuation.definition.template-expression": "other",
+          "entity.name.type.instance.jsdoc": "other",
+          "entity.name.function.tagged-template": "other",
+          "meta.import string.quoted": "other",
+          "variable.other.jsdoc": "other"
+        }
+      }
+    },
+    {
+      "scopeName": "source.css.postcss",
+      "url": "https://raw.githubusercontent.com/sveltejs/language-tools/fda3f39950e71d3371fdc9ebc811c444b8714ad4/packages/svelte-vscode/syntaxes/postcss.src.yaml",
+      "format": "yaml",
+      "injectTo": [
+        "source.svelte"
+      ],
+      "contribution": {
+        "scopeName": "source.css.postcss",
+        "injectTo": [
+          "source.svelte"
+        ]
+      }
+    }
+  ],
+  "languages": [
+    {
+      "id": "svelte",
+      "aliases": [
+        "Svelte",
+        "svelte"
+      ],
+      "extensions": [
+        ".svelte"
+      ],
+      "configuration": "./syntaxes/frameworks/svelte/svelte.language-configuration.json"
+    }
+  ],
+  "configurations": [
+    {
+      "source": "https://raw.githubusercontent.com/sveltejs/language-tools/fda3f39950e71d3371fdc9ebc811c444b8714ad4/packages/svelte-vscode/language-configuration.json",
+      "filename": "svelte.language-configuration.json"
+    }
+  ],
+  "licenses": [
+    {
+      "source": "https://raw.githubusercontent.com/sveltejs/language-tools/fda3f39950e71d3371fdc9ebc811c444b8714ad4/LICENSE",
+      "filename": "LICENSE.txt"
+    }
+  ]
+}

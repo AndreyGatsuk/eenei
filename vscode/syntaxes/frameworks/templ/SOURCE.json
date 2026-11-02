@@ -1,0 +1,50 @@
+{
+  "id": "templ",
+  "scope": "source.templ",
+  "sample": "sample.templ",
+  "extension": "a-h.templ",
+  "repository": "https://github.com/templ-go/templ-vscode",
+  "grammars": [
+    {
+      "scopeName": "source.templ",
+      "url": "https://raw.githubusercontent.com/templ-go/templ-vscode/f94c5e42d84b049c897afdda28c0f3f29bf5596c/syntaxes/templ.tmLanguage.json",
+      "format": "textmate",
+      "injectTo": [],
+      "contribution": {
+        "language": "templ",
+        "scopeName": "source.templ",
+        "embeddedLanguages": {
+          "meta.embedded.block.go": "go",
+          "meta.embedded.block.js": "javascript",
+          "meta.embedded.block.html": "html",
+          "meta.embedded.block.css": "css"
+        }
+      }
+    }
+  ],
+  "languages": [
+    {
+      "id": "templ",
+      "aliases": [
+        "templ",
+        "templ"
+      ],
+      "extensions": [
+        ".templ"
+      ],
+      "configuration": "./syntaxes/frameworks/templ/templ.language-configuration.json"
+    }
+  ],
+  "configurations": [
+    {
+      "source": "https://raw.githubusercontent.com/templ-go/templ-vscode/f94c5e42d84b049c897afdda28c0f3f29bf5596c/language-configuration.json",
+      "filename": "templ.language-configuration.json"
+    }
+  ],
+  "licenses": [
+    {
+      "source": "https://raw.githubusercontent.com/templ-go/templ-vscode/f94c5e42d84b049c897afdda28c0f3f29bf5596c/LICENSE",
+      "filename": "LICENSE.txt"
+    }
+  ]
+}

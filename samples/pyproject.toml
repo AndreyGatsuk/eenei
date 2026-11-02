@@ -1,0 +1,5 @@
+[project]
+name = "theme-lab-preview"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["idna>=3.10,<4"]

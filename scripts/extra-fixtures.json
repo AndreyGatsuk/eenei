@@ -1,0 +1,210 @@
+[
+  {
+    "id": "git-commit",
+    "sample": "tests/fixtures/git/COMMIT_EDITMSG",
+    "scope": "text.git-commit",
+    "languageId": "git-commit"
+  },
+  {
+    "id": "git-rebase",
+    "sample": "tests/fixtures/git/git-rebase-todo",
+    "scope": "text.git-rebase",
+    "languageId": "git-rebase"
+  },
+  {
+    "id": "properties",
+    "sample": "tests/fixtures/config/preview.properties",
+    "scope": "source.ini",
+    "languageId": "properties"
+  },
+  {
+    "id": "snippets",
+    "sample": "tests/fixtures/config/preview.code-snippets",
+    "scope": "source.json.comments.snippets",
+    "languageId": "snippets"
+  },
+  {
+    "id": "search-result",
+    "sample": "tests/fixtures/editor/preview.code-search",
+    "scope": "text.searchResult",
+    "languageId": "search-result"
+  },
+  {
+    "id": "prompt",
+    "sample": "tests/fixtures/editor/preview.prompt.md",
+    "scope": "text.html.markdown.prompt",
+    "languageId": "prompt"
+  },
+  {
+    "id": "instructions",
+    "sample": "tests/fixtures/editor/preview.instructions.md",
+    "scope": "text.html.markdown.prompt",
+    "languageId": "instructions"
+  },
+  {
+    "id": "chatagent",
+    "sample": "tests/fixtures/editor/preview.agent.md",
+    "scope": "text.html.markdown.prompt",
+    "languageId": "chatagent"
+  },
+  {
+    "id": "skill",
+    "sample": "tests/fixtures/editor/SKILL.md",
+    "scope": "text.html.markdown.prompt",
+    "languageId": "skill"
+  },
+  {
+    "id": "cpp_embedded_latex",
+    "sample": "tests/fixtures/embedded/cpp.tex",
+    "scope": "text.tex.latex",
+    "languageId": "latex",
+    "coverageLanguageIds": [
+      "cpp_embedded_latex"
+    ],
+    "coverageScopes": [
+      "source.cpp.embedded.latex"
+    ],
+    "requiredScopes": [
+      "source.cpp.embedded.latex"
+    ],
+    "assertionScope": "source.cpp.embedded.latex"
+  },
+  {
+    "id": "markdown_latex_combined",
+    "sample": "tests/fixtures/embedded/markdown.tex",
+    "scope": "text.tex.latex",
+    "languageId": "latex",
+    "coverageLanguageIds": [
+      "markdown_latex_combined"
+    ],
+    "coverageScopes": [
+      "text.tex.markdown_latex_combined"
+    ],
+    "requiredScopes": [
+      "meta.embedded.markdown_latex_combined"
+    ],
+    "assertionScope": "meta.embedded.markdown_latex_combined"
+  },
+  {
+    "id": "markdown-math",
+    "sample": "tests/fixtures/embedded/math.md",
+    "scope": "text.html.markdown",
+    "languageId": "markdown",
+    "coverageLanguageIds": [
+      "markdown-math"
+    ],
+    "coverageScopes": [
+      "text.html.markdown.math"
+    ],
+    "requiredScopes": [
+      "meta.embedded.math.markdown"
+    ],
+    "assertionScope": "meta.embedded.math.markdown"
+  },
+  {
+    "id": "cpp",
+    "sample": "tests/fixtures/extensions/preview.hpp",
+    "scope": "source.cpp",
+    "languageId": "cpp"
+  },
+  {
+    "id": "groovy",
+    "sample": "tests/fixtures/config/Jenkinsfile",
+    "scope": "source.groovy",
+    "languageId": "groovy"
+  },
+  {
+    "id": "cpp",
+    "sample": "tests/fixtures/embedded/macros.cpp",
+    "scope": "source.cpp",
+    "languageId": "cpp",
+    "coverageScopes": [
+      "source.cpp.embedded.macro"
+    ],
+    "requiredScopes": [
+      "meta.preprocessor.macro.cpp"
+    ],
+    "assertionScope": "meta.preprocessor.macro.cpp"
+  },
+  {
+    "id": "php",
+    "sample": "tests/fixtures/embedded/code.php",
+    "scope": "text.html.php",
+    "languageId": "php",
+    "coverageScopes": [
+      "source.php"
+    ],
+    "requiredScopes": [
+      "source.php"
+    ],
+    "assertionScope": "source.php"
+  },
+  {
+    "id": "bat",
+    "sample": "tests/fixtures/extensions/preview.cmd",
+    "scope": "source.batchfile",
+    "languageId": "bat"
+  },
+  {
+    "id": "graphql",
+    "sample": "tests/fixtures/extensions/preview.gql",
+    "scope": "source.graphql",
+    "languageId": "graphql"
+  },
+  {
+    "id": "graphql",
+    "sample": "tests/fixtures/extensions/preview.graphqls",
+    "scope": "source.graphql",
+    "languageId": "graphql"
+  },
+  {
+    "id": "elixir",
+    "sample": "tests/fixtures/extensions/preview.exs",
+    "scope": "source.elixir",
+    "languageId": "elixir"
+  },
+  {
+    "id": "elixir",
+    "sample": "tests/fixtures/config/mix.lock",
+    "scope": "source.elixir",
+    "languageId": "elixir"
+  },
+  {
+    "id": "zig",
+    "sample": "tests/fixtures/config/build.zig.zon",
+    "scope": "source.zig",
+    "languageId": "zig"
+  },
+  {
+    "id": "markdown",
+    "sample": "tests/fixtures/embedded/nix.md",
+    "scope": "text.html.markdown",
+    "languageId": "markdown",
+    "coverageLanguageIds": [
+      "nix"
+    ],
+    "coverageScopes": [
+      "source.nix"
+    ],
+    "requiredScopes": [
+      "meta.embedded.block.nix"
+    ],
+    "assertionScope": "meta.embedded.block.nix"
+  },
+  {
+    "id": "markdown",
+    "sample": "tests/fixtures/embedded/zig.md",
+    "scope": "text.html.markdown",
+    "languageId": "markdown",
+    "coverageLanguageIds": [
+      "zig"
+    ],
+    "coverageScopes": [
+      "source.zig"
+    ],
+    "requiredScopes": [
+      "meta.embedded.block.zig"
+    ],
+    "assertionScope": "meta.embedded.block.zig"
+  }
+]

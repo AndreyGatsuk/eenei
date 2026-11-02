@@ -1,0 +1,30 @@
+:root {
+  --background: #0a0e14;
+  --foreground: #e0ded8;
+  --accent: #86c17a;
+}
+
+/* Keep the content readable on small screens. */
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font: 1rem / 1.6 "Inter", system-ui, sans-serif;
+}
+
+.projects {
+  display: grid;
+  gap: 1.5rem;
+  width: min(60rem, calc(100% - 3rem));
+  margin-inline: auto;
+}
+
+a[href]:hover,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 40rem) {
+  .projects { gap: 1rem; }
+}

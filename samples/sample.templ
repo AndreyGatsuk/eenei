@@ -1,0 +1,14 @@
+package preview
+
+import "fmt"
+
+// Preview the active projects.
+templ ProjectCard(name string, active bool) {
+  <article class="project">
+    if active {
+      <h1>{ fmt.Sprintf("Project: %s", name) }</h1>
+    } else {
+      <p>Archived</p>
+    }
+  </article>
+}

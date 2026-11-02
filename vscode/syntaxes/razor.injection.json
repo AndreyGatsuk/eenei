@@ -1,0 +1,29 @@
+{
+  "scopeName": "theme-lab.injection.razor",
+  "injectionSelector": "L:text.html.cshtml meta.structure.razor.csharp.codeblock -comment -string -meta.tag.embedded.razor",
+  "patterns": [
+    {
+      "name": "meta.tag.embedded.razor",
+      "begin": "(?<![\\w.])(<)([A-Za-z][A-Za-z0-9:-]*)(?=\\s|/?>)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html"
+        }
+      },
+      "end": "/?>",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.basic#attribute"
+        }
+      ]
+    }
+  ]
+}

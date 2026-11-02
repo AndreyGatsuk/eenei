@@ -1,0 +1,59 @@
+{
+  "id": "elixir",
+  "scope": "source.elixir",
+  "sample": "sample.ex",
+  "extension": "JakeBecker.elixir-ls",
+  "repository": "https://github.com/elixir-lsp/vscode-elixir-ls",
+  "grammars": [
+    {
+      "scopeName": "source.elixir",
+      "url": "https://raw.githubusercontent.com/elixir-lsp/vscode-elixir-ls/72c89d1cc38e9e4a4c54d6715e4372338df976e7/syntaxes/elixir.json",
+      "format": "textmate",
+      "injectTo": [],
+      "contribution": {
+        "language": "elixir",
+        "scopeName": "source.elixir",
+        "unbalancedBracketScopes": [
+          "keyword.operator.bitwise.elixir",
+          "keyword.operator.other.unbalanced.elixir",
+          "constant.language.symbol.elixir",
+          "constant.language.symbol.single-quoted.elixir",
+          "constant.language.symbol.double-quoted.elixir",
+          "entity.name.function.call.dot.elixir"
+        ],
+        "embeddedLanguages": {
+          "comment.documentation.heredoc.elixir": "markdown"
+        }
+      }
+    }
+  ],
+  "languages": [
+    {
+      "id": "elixir",
+      "aliases": [
+        "Elixir",
+        "elixir"
+      ],
+      "extensions": [
+        ".ex",
+        ".exs"
+      ],
+      "filenames": [
+        "mix.lock"
+      ],
+      "configuration": "./syntaxes/frameworks/elixir/elixir.language-configuration.json"
+    }
+  ],
+  "configurations": [
+    {
+      "source": "https://raw.githubusercontent.com/elixir-lsp/vscode-elixir-ls/72c89d1cc38e9e4a4c54d6715e4372338df976e7/elixir-language-configuration.json",
+      "filename": "elixir.language-configuration.json"
+    }
+  ],
+  "licenses": [
+    {
+      "source": "https://raw.githubusercontent.com/elixir-lsp/vscode-elixir-ls/72c89d1cc38e9e4a4c54d6715e4372338df976e7/LICENSE",
+      "filename": "LICENSE.txt"
+    }
+  ]
+}

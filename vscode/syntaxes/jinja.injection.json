@@ -1,0 +1,9 @@
+{
+  "scopeName": "theme-lab.injection.jinja",
+  "injectionSelector": "L:text.html.jinja string.quoted",
+  "patterns": [
+    {
+      "include": "source.jinja"
+    }
+  ]
+}

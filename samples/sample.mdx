@@ -1,0 +1,22 @@
+import { ProjectCard } from "./ProjectCard.jsx"
+
+export const project = { name: "Navigate", active: true }
+
+# Project overview
+
+{/* This comment belongs to JSX inside Markdown. */}
+
+Read the [project guide](https://example.com) or inspect `compose.yaml`.
+
+<ProjectCard project={project} />
+
+```typescript
+const label = `Project: ${project.name}`;
+```
+
+```yaml
+read_only: true
+replicas: 2
+command: |
+  echo ready
+```

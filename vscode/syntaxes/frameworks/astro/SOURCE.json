@@ -1,0 +1,72 @@
+{
+  "id": "astro",
+  "scope": "source.astro",
+  "sample": "sample.astro",
+  "extension": "astro-build.astro-vscode",
+  "repository": "https://github.com/withastro/astro",
+  "grammars": [
+    {
+      "scopeName": "source.astro",
+      "url": "https://raw.githubusercontent.com/withastro/astro/10dae2f31486cc0a6a04d1f3d7f5ab7fa8889b30/packages/language-tools/vscode/syntaxes/astro.tmLanguage.json",
+      "format": "textmate",
+      "injectTo": [],
+      "contribution": {
+        "language": "astro",
+        "scopeName": "source.astro",
+        "embeddedLanguages": {
+          "text.html": "html",
+          "text.html.markdown": "markdown",
+          "source.css": "css",
+          "source.css.less": "less",
+          "source.css.scss": "scss",
+          "source.sass": "sass",
+          "source.stylus": "stylus",
+          "source.js": "javascript",
+          "source.ts": "typescript",
+          "source.json": "json",
+          "source.tsx": "typescriptreact",
+          "meta.tag.tsx": "jsx-tags",
+          "meta.tag.without-attributes.tsx": "jsx-tags",
+          "meta.tag.attributes.tsx": "typescriptreact",
+          "meta.embedded.expression.tsx": "typescriptreact"
+        },
+        "unbalancedBracketScopes": [
+          "keyword.operator.relational",
+          "storage.type.function.arrow",
+          "keyword.operator.bitwise.shift",
+          "meta.brace.angle",
+          "punctuation.definition.tag",
+          "keyword.operator.assignment.compound.bitwise.ts"
+        ]
+      }
+    }
+  ],
+  "languages": [
+    {
+      "id": "astro",
+      "extensions": [
+        ".astro"
+      ],
+      "aliases": [
+        "Astro"
+      ],
+      "configuration": "./syntaxes/frameworks/astro/astro.language-configuration.json",
+      "icon": {
+        "light": "./assets/lang-icon-light.svg",
+        "dark": "./assets/lang-icon-dark.svg"
+      }
+    }
+  ],
+  "configurations": [
+    {
+      "source": "https://raw.githubusercontent.com/withastro/astro/10dae2f31486cc0a6a04d1f3d7f5ab7fa8889b30/packages/language-tools/vscode/languages/astro-language-configuration.json",
+      "filename": "astro.language-configuration.json"
+    }
+  ],
+  "licenses": [
+    {
+      "source": "https://raw.githubusercontent.com/withastro/astro/10dae2f31486cc0a6a04d1f3d7f5ab7fa8889b30/packages/language-tools/vscode/LICENSE",
+      "filename": "LICENSE.txt"
+    }
+  ]
+}

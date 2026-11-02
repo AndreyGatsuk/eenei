@@ -1,0 +1,20 @@
+$gap: 1rem;
+$accent: #83b8d6;
+
+// Nested selectors, interpolation and control flow.
+@mixin panel($space: $gap) {
+  display: grid;
+  gap: $space;
+}
+
+.project {
+  @include panel();
+  color: $accent;
+  &::after { content: "Ready"; }
+  &__title { font-weight: 600; }
+  @media (max-width: 40rem) { gap: calc($gap / 2); }
+}
+
+@each $size in small, large {
+  .project-#{$size} { padding: $gap; }
+}

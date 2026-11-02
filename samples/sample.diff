@@ -1,0 +1,10 @@
+diff --git a/src/project.ts b/src/project.ts
+index 4f8a013..09e1804 100644
+--- a/src/project.ts
++++ b/src/project.ts
+@@ -1,3 +1,4 @@
+ export function projectName(name: string) {
+-  return name;
++  // Normalize names before display.
++  return name.trim() || "Untitled";
+ }

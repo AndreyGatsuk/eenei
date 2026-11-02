@@ -1,0 +1,22 @@
+{
+  "scopeName": "theme-lab.injection.dockerfile",
+  "injectionSelector": "L:source.dockerfile -comment -string",
+  "patterns": [
+    {
+      "name": "meta.command.run.dockerfile",
+      "begin": "^(?i:(RUN))\\s+(?!\\s*\\[)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.other.special-method.dockerfile"
+        }
+      },
+      "end": "(?<!\\\\)$",
+      "contentName": "meta.embedded.block.shell",
+      "patterns": [
+        {
+          "include": "source.shell"
+        }
+      ]
+    }
+  ]
+}

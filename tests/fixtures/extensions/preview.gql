@@ -1,0 +1,4 @@
+# Preview the active projects.
+query Projects {
+  projects(name: "eenei") { id name }
+}

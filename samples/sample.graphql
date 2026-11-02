@@ -1,0 +1,12 @@
+# Select active project names and reuse a fragment.
+query Projects($limit: Int = 10) {
+  projects(limit: $limit, active: true, search: "Navigate") {
+    ...ProjectInfo
+    owner { name }
+  }
+}
+
+fragment ProjectInfo on Project {
+  id
+  name
+}

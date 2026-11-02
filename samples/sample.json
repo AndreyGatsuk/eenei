@@ -1,0 +1,18 @@
+{
+  "name": "navigate-preview",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Configuration sample for checking theme colors",
+  "server": {
+    "host": "localhost",
+    "port": 8080,
+    "tls": false,
+    "certificate": null
+  },
+  "projects": [
+    { "id": "navigate", "archived": false },
+    { "id": "legacy", "archived": true }
+  ],
+  "message": "Project \"Navigate\" is ready.\nOpen the preview.",
+  "paths": ["src/", "docs/", "sample/"]
+}

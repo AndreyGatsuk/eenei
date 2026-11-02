@@ -1,0 +1,10 @@
+{# A server-rendered template with filters and control flow. #}
+<section class="projects">
+  {% for project in projects %}
+    {% if project.active %}
+      <a href="{{ project.url }}" title="Open project">{{ project.name | escape }}</a>
+    {% else %}
+      <span>No active project</span>
+    {% endif %}
+  {% endfor %}
+</section>

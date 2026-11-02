@@ -1,0 +1,2579 @@
+{
+  "sample.rs": [
+    [
+      "pub type TypeAlias",
+      "TypeAlias",
+      "regular",
+      {
+        "bold": true
+      }
+    ],
+    [
+      "pub struct Struct",
+      "Struct",
+      "regular",
+      {
+        "bold": true
+      }
+    ],
+    [
+      "pub enum Enum",
+      "Enum",
+      "regular",
+      {
+        "bold": true
+      }
+    ],
+    [
+      "pub trait Trait",
+      "Trait",
+      "regular",
+      {
+        "bold": true
+      }
+    ],
+    [
+      "impl<GenType: Trait> Struct<'_, GenType>",
+      "Struct",
+      "regular",
+      {
+        "bold": true
+      }
+    ],
+    [
+      "impl<GenType: Trait> Struct<'_, GenType>",
+      "Trait",
+      "regular",
+      {
+        "bold": false
+      }
+    ],
+    [
+      "/// Doc comment.",
+      "///",
+      "docComment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "use std::collections",
+      "std",
+      "insignificant"
+    ],
+    [
+      "#[derive(Debug, Clone)]",
+      "derive",
+      "insignificant"
+    ],
+    [
+      "pub struct Struct<'lifetime",
+      "lifetime",
+      "insignificant"
+    ],
+    [
+      "impl<GenType: Trait> Trait for Struct",
+      "for",
+      "insignificant"
+    ],
+    [
+      "let local = std::fs::read_to_string(param)?",
+      "?",
+      "important"
+    ],
+    [
+      "println!(\"parsed",
+      "println!",
+      "important"
+    ],
+    [
+      "pub unsafe trait UnsafeTrait",
+      "unsafe",
+      "important"
+    ],
+    [
+      "macro_rules! ScalarCount",
+      "ScalarCount",
+      "important"
+    ],
+    [
+      "#[doc = \"Scalar syntax samples.\"]",
+      "\"",
+      "insignificant"
+    ],
+    [
+      "#[doc = \"Scalar syntax samples.\"]",
+      "Scalar syntax samples.",
+      "insignificant"
+    ],
+    [
+      "let marker = '\\n'",
+      "'",
+      "string"
+    ],
+    [
+      "let scale = 1e+3",
+      "e+",
+      "regular"
+    ],
+    [
+      "count += 1",
+      "+=",
+      "regular"
+    ],
+    [
+      "let mut count = ScalarCount!();",
+      "ScalarCount!",
+      "important"
+    ]
+  ],
+  "sample.js": [
+    [
+      "/** Load active projects",
+      "/**",
+      "docComment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "/** Load active projects",
+      "Load active projects",
+      "docComment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "export async function loadProjects",
+      "export",
+      "insignificant"
+    ],
+    [
+      "export class ProjectCache",
+      "ProjectCache",
+      "regular",
+      {
+        "bold": true
+      }
+    ],
+    [
+      "if (!/^[a-z\\d-]+$/i",
+      "[",
+      "string"
+    ],
+    [
+      "if (!/^[a-z\\d-]+$/i",
+      "+",
+      "string"
+    ],
+    [
+      "constructor(name) { super(name); }",
+      "super",
+      "insignificant"
+    ],
+    [
+      "count++;",
+      "++",
+      "regular"
+    ],
+    [
+      "count--;",
+      "--",
+      "regular"
+    ],
+    [
+      "count += 2;",
+      "+=",
+      "regular"
+    ],
+    [
+      "const smaller = count < limit",
+      "<",
+      "regular"
+    ]
+  ],
+  "sample.jsx": [
+    [
+      "import { useState } from \"react\"",
+      "from",
+      "insignificant"
+    ],
+    [
+      "// JSX expressions and template",
+      "JSX expressions",
+      "comment",
+      {
+        "italic": true
+      }
+    ]
+  ],
+  "sample.py": [
+    [
+      "\"\"\"Doc comment.\"\"\"",
+      "\"\"\"",
+      "docComment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "@dataclass(frozen=True)",
+      "dataclass",
+      "insignificant"
+    ],
+    [
+      "raise ValueError(f'cannot read",
+      "f'",
+      "string"
+    ],
+    [
+      "raise ValueError(f'cannot read",
+      "{",
+      "insignificant"
+    ],
+    [
+      "@labeled(\"Preview\")",
+      "\"",
+      "insignificant"
+    ],
+    [
+      "@labeled(\"Preview\")",
+      "Preview",
+      "insignificant"
+    ]
+  ],
+  "compose.yaml": [
+    [
+      "- \"8080:80\"",
+      "\"",
+      "string"
+    ]
+  ],
+  "sample.diff": [
+    [
+      "--- a/src/project.ts",
+      "---",
+      "removed",
+      {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false
+      }
+    ],
+    [
+      "+++ b/src/project.ts",
+      "+++",
+      "added",
+      {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false
+      }
+    ],
+    [
+      "@@ -1,3 +1,4 @@",
+      "-1,3",
+      "important"
+    ],
+    [
+      "-  return name;",
+      "-",
+      "removed"
+    ],
+    [
+      "+  // Normalize names",
+      "+",
+      "added"
+    ]
+  ],
+  "sample.graphql": [
+    [
+      "query Projects($limit: Int = 10)",
+      "(",
+      "insignificant"
+    ]
+  ],
+  "notes.md": [
+    [
+      "**Important text** and *emphasis*",
+      "emphasis",
+      "regular",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "[related documentation](sample.md)",
+      "related documentation",
+      "important",
+      {
+        "underline": true
+      }
+    ],
+    [
+      "[related documentation](sample.md)",
+      "sample.md",
+      "important",
+      {
+        "underline": true
+      }
+    ]
+  ],
+  "sample.md": [
+    [
+      "~~strikethrough~~",
+      "strikethrough",
+      "regular",
+      {
+        "strikethrough": true
+      }
+    ],
+    [
+      "Additional notes with an &amp;",
+      "project",
+      "important",
+      {
+        "underline": true
+      }
+    ]
+  ],
+  "sample.mdx": [
+    [
+      "Read the [project guide]",
+      "https://example.com",
+      "important",
+      {
+        "underline": true
+      }
+    ],
+    [
+      "Read the [project guide]",
+      "[",
+      "insignificant"
+    ],
+    [
+      "Read the [project guide]",
+      "]",
+      "insignificant"
+    ],
+    [
+      "Read the [project guide]",
+      "project guide",
+      "regular",
+      {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false
+      }
+    ],
+    [
+      "command: |",
+      "|",
+      "insignificant"
+    ]
+  ],
+  "sample.vue": [
+    [
+      "<button v-if=\"active\"",
+      "\"name\"",
+      "insignificant"
+    ]
+  ],
+  "sample.json": [
+    [
+      "\"name\": \"navigate-preview\"",
+      "name",
+      "regular",
+      {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false
+      }
+    ]
+  ],
+  "Project.java": [
+    [
+      "/** A project with",
+      "/**",
+      "docComment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "/** A project with",
+      "A project with",
+      "docComment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "return name == null",
+      "return",
+      "important"
+    ],
+    [
+      "return name == null",
+      "==",
+      "regular"
+    ],
+    [
+      "return name == null",
+      "Untitled",
+      "string",
+      {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false
+      }
+    ]
+  ],
+  "sample.cpp": [
+    [
+      "#include <iostream>",
+      "include",
+      "insignificant"
+    ],
+    [
+      "struct Project {",
+      "Project",
+      "regular",
+      {
+        "bold": true
+      }
+    ],
+    [
+      "/// Find the first project",
+      "///",
+      "docComment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "/// Find the first project",
+      "Find the first project",
+      "docComment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "continue; // Archived",
+      "continue",
+      "important"
+    ],
+    [
+      "std::cout << \"Project: \"",
+      "<<",
+      "regular"
+    ],
+    [
+      "std::cout << \"Project: \"",
+      "Project:",
+      "string"
+    ],
+    [
+      "std::cout << \"Project: \"",
+      "\\n",
+      "string"
+    ]
+  ],
+  "sample.go": [
+    [
+      "// Project is a named entry",
+      "Project is a named entry",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "ID       string `json:\"id\"`",
+      "ID",
+      "regular"
+    ],
+    [
+      "ID       string `json:\"id\"`",
+      "json:",
+      "string"
+    ],
+    [
+      "if response.StatusCode != http.StatusOK {",
+      "!=",
+      "regular"
+    ],
+    [
+      "return nil, fmt.Errorf(\"load projects",
+      "return",
+      "important"
+    ],
+    [
+      "return nil, fmt.Errorf(\"load projects",
+      "load projects:",
+      "string"
+    ]
+  ],
+  "sample.html": [
+    [
+      "<!-- Semantic markup",
+      "Semantic markup",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "<title>eenei",
+      "eenei",
+      "regular"
+    ],
+    [
+      "<input id=\"query\"",
+      "query",
+      "string"
+    ],
+    [
+      "<form action=\"/search\"",
+      "form",
+      "regular"
+    ]
+  ],
+  "sample.css": [
+    [
+      "/* Keep the content readable",
+      "Keep the content readable",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "font: 1rem",
+      "Inter",
+      "string"
+    ],
+    [
+      "width: min(60rem, calc(100% - 3rem))",
+      "-",
+      "regular"
+    ],
+    [
+      "@media (max-width: 40rem)",
+      "media",
+      "important"
+    ],
+    [
+      "@media (max-width: 40rem)",
+      "@",
+      "insignificant"
+    ]
+  ],
+  "sample.scss": [
+    [
+      "// Nested selectors",
+      "Nested selectors",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "$gap: 1rem;",
+      "$gap",
+      "regular"
+    ],
+    [
+      "@mixin panel",
+      "mixin",
+      "important"
+    ],
+    [
+      "content: \"Ready\"",
+      "Ready",
+      "string"
+    ],
+    [
+      "@each $size",
+      "each",
+      "important"
+    ]
+  ],
+  "sample.less": [
+    [
+      "// Parameters, nested rules",
+      "Parameters, nested rules",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "@gap: 1rem;",
+      "gap",
+      "regular"
+    ],
+    [
+      "content: \"Ready\"",
+      "Ready",
+      "string"
+    ],
+    [
+      "&:hover { opacity: 0.8; }",
+      "0.8",
+      "regular"
+    ],
+    [
+      "@gap: 1rem;",
+      "@",
+      "insignificant"
+    ]
+  ],
+  "sample.sh": [
+    [
+      "# Inspect a Compose",
+      "Inspect a Compose",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if [[ ! -f \"$compose_file\" ]]",
+      "if",
+      "important"
+    ],
+    [
+      "if [[ ! -f \"$compose_file\" ]]",
+      "compose_file",
+      "regular"
+    ],
+    [
+      "printf 'Missing Compose file:",
+      "Missing Compose file:",
+      "string"
+    ],
+    [
+      "return 1",
+      "return",
+      "important"
+    ]
+  ],
+  "sample.sql": [
+    [
+      "-- Find active projects",
+      "Find active projects",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "WHERE created_at >=",
+      "WHERE",
+      "important"
+    ],
+    [
+      "WHERE created_at >=",
+      "-",
+      "regular"
+    ],
+    [
+      "WHERE created_at >=",
+      "7 days",
+      "string"
+    ],
+    [
+      "WHEN e.last_seen IS NULL THEN",
+      "WHEN",
+      "important"
+    ],
+    [
+      "LIMIT 20",
+      "20",
+      "regular"
+    ],
+    [
+      "    CASE",
+      "CASE",
+      "important"
+    ],
+    [
+      "WHEN e.last_seen IS NULL THEN",
+      "THEN",
+      "important"
+    ],
+    [
+      "ELSE 'Active'",
+      "ELSE",
+      "important"
+    ],
+    [
+      "END AS status",
+      "END",
+      "important"
+    ],
+    [
+      "WITH recent_events",
+      "WITH",
+      "important"
+    ],
+    [
+      "SELECT project_id, COUNT",
+      "SELECT",
+      "important"
+    ],
+    [
+      "FROM events",
+      "FROM",
+      "important"
+    ],
+    [
+      "GROUP BY project_id",
+      "GROUP",
+      "important"
+    ],
+    [
+      "GROUP BY project_id",
+      "BY",
+      "important"
+    ],
+    [
+      "LEFT JOIN recent_events",
+      "LEFT",
+      "important"
+    ],
+    [
+      "LEFT JOIN recent_events",
+      "JOIN",
+      "important"
+    ],
+    [
+      "LEFT JOIN recent_events",
+      "ON",
+      "important"
+    ],
+    [
+      "ORDER BY event_count",
+      "ORDER",
+      "important"
+    ],
+    [
+      "ORDER BY event_count",
+      "BY",
+      "important"
+    ],
+    [
+      "LIMIT 20",
+      "LIMIT",
+      "important"
+    ],
+    [
+      "SELECT project_id, COUNT",
+      "COUNT",
+      "regular"
+    ],
+    [
+      "SELECT project_id, COUNT",
+      "MAX",
+      "regular"
+    ],
+    [
+      "COALESCE(e.event_count",
+      "COALESCE",
+      "regular"
+    ],
+    [
+      "COALESCE(e.event_count",
+      "event_count",
+      "regular"
+    ],
+    [
+      "WHEN e.last_seen IS NULL THEN",
+      "IS",
+      "regular"
+    ],
+    [
+      "WHEN e.last_seen IS NULL THEN",
+      "NULL",
+      "regular"
+    ],
+    [
+      "INSERT INTO projects",
+      "INSERT",
+      "important"
+    ],
+    [
+      "INSERT INTO projects",
+      "INTO",
+      "important"
+    ],
+    [
+      "VALUES (",
+      "VALUES",
+      "important"
+    ],
+    [
+      "RETURNING id",
+      "RETURNING",
+      "important"
+    ],
+    [
+      "UPDATE projects SET",
+      "UPDATE",
+      "important"
+    ],
+    [
+      "UPDATE projects SET",
+      "SET",
+      "important"
+    ],
+    [
+      "UPDATE projects SET",
+      "TRUE",
+      "regular"
+    ],
+    [
+      "DELETE FROM projects",
+      "DELETE",
+      "important"
+    ],
+    [
+      "DELETE FROM projects",
+      "AND",
+      "regular"
+    ],
+    [
+      "DELETE FROM projects",
+      "LIKE",
+      "regular"
+    ]
+  ],
+  "sample.ts": [
+    [
+      "/** Parse external data",
+      "Parse external data",
+      "docComment",
+      {
+        "italic": true
+      }
+    ]
+  ],
+  "sample.tsx": [
+    [
+      "/** A small list",
+      "A small list",
+      "docComment",
+      {
+        "italic": true
+      }
+    ]
+  ],
+  "sample.lua": [
+    [
+      "-- Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "local function label",
+      "local",
+      "insignificant"
+    ],
+    [
+      "local function label",
+      "label",
+      "regular"
+    ],
+    [
+      "if project.active then",
+      "if",
+      "important"
+    ],
+    [
+      "return \"Project: \"",
+      "return",
+      "important"
+    ],
+    [
+      "return \"Project: \"",
+      "Project:",
+      "string"
+    ],
+    [
+      "local scale",
+      "1.5e+2",
+      "regular"
+    ],
+    [
+      "local escaped",
+      "\\n",
+      "string"
+    ],
+    [
+      "local sum",
+      "+",
+      "regular"
+    ],
+    [
+      "local sum",
+      "*",
+      "regular"
+    ],
+    [
+      "local bits",
+      "<<",
+      "regular"
+    ],
+    [
+      "local bits",
+      "|",
+      "regular"
+    ],
+    [
+      "local ready",
+      "not",
+      "regular"
+    ],
+    [
+      "local ready",
+      "and",
+      "regular"
+    ],
+    [
+      "local ready",
+      ">",
+      "regular"
+    ],
+    [
+      "local count",
+      "count",
+      "regular"
+    ],
+    [
+      "local count",
+      "0x2A",
+      "regular"
+    ],
+    [
+      "for index",
+      "for",
+      "important"
+    ],
+    [
+      "while remaining",
+      "while",
+      "important"
+    ],
+    [
+      "until remaining",
+      "until",
+      "important"
+    ],
+    [
+      "--- Build",
+      "Build",
+      "docComment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "return [=[",
+      "No ]] active project",
+      "string"
+    ],
+    [
+      "local count",
+      "=",
+      "insignificant"
+    ],
+    [
+      "local projects =",
+      "{",
+      "insignificant"
+    ],
+    [
+      "--- Build",
+      "---",
+      "docComment",
+      {
+        "italic": true
+      }
+    ]
+  ],
+  "sample.bat": [
+    [
+      "rem Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "set \"PROJECT",
+      "eenei",
+      "string"
+    ],
+    [
+      "if defined",
+      "if",
+      "important"
+    ]
+  ],
+  "sample.c": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "struct Project project",
+      "eenei",
+      "string"
+    ],
+    [
+      "if (project.active)",
+      "if",
+      "important"
+    ],
+    [
+      "return 0",
+      "return",
+      "important"
+    ]
+  ],
+  "sample.clj": [
+    [
+      ";; Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "(def projects",
+      "eenei",
+      "string"
+    ],
+    [
+      "(if (:active",
+      "if",
+      "important"
+    ]
+  ],
+  "sample.cs": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "return $\"",
+      "Project:",
+      "string"
+    ],
+    [
+      "return $\"",
+      "project",
+      "regular"
+    ],
+    [
+      "if (project.Active)",
+      "if",
+      "important"
+    ]
+  ],
+  "sample.dart": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "return \"Project:",
+      "Project:",
+      "string"
+    ],
+    [
+      "return \"Project:",
+      "project",
+      "regular"
+    ],
+    [
+      "if (project.active)",
+      "if",
+      "important"
+    ]
+  ],
+  "sample.ini": [
+    [
+      "; Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "name =",
+      "eenei",
+      "string"
+    ],
+    [
+      "limit =",
+      "42",
+      "regular"
+    ]
+  ],
+  "Makefile": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "@echo",
+      "Project:",
+      "string"
+    ],
+    [
+      "PROJECT :=",
+      "PROJECT",
+      "regular"
+    ]
+  ],
+  "sample.m": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "return [@",
+      "Project:",
+      "string"
+    ],
+    [
+      "if (self.name",
+      "if",
+      "important"
+    ]
+  ],
+  "sample.php": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "return \"Project:",
+      "Project:",
+      "string"
+    ],
+    [
+      "if ($project",
+      "if",
+      "important"
+    ]
+  ],
+  "sample.ps1": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "return \"Project:",
+      "Project:",
+      "string"
+    ],
+    [
+      "if ($Active)",
+      "if",
+      "important"
+    ]
+  ],
+  "sample.rst": [
+    [
+      ".. Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "Use **bold**",
+      "bold",
+      "regular",
+      {
+        "bold": true
+      }
+    ],
+    [
+      "Use **bold**",
+      "emphasis",
+      "regular",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "Use **bold**",
+      "compose.yaml",
+      "string"
+    ]
+  ],
+  "sample.rb": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "\"Project:",
+      "Project:",
+      "string"
+    ],
+    [
+      "if @active",
+      "if",
+      "important"
+    ]
+  ],
+  "sample.xml": [
+    [
+      "<!-- Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "<project active",
+      "true",
+      "string"
+    ],
+    [
+      "<name>eenei",
+      "eenei",
+      "regular"
+    ]
+  ],
+  "sample.ex": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "\"Project:",
+      "Project:",
+      "string"
+    ],
+    [
+      "if project.active",
+      "if",
+      "important"
+    ]
+  ],
+  "sample.hs": [
+    [
+      "-- Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "then \"Project:",
+      "Project:",
+      "string"
+    ],
+    [
+      "if active project",
+      "if",
+      "important"
+    ]
+  ],
+  "sample.lisp": [
+    [
+      ";; Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "(concatenate",
+      "Project:",
+      "string"
+    ],
+    [
+      "(if active",
+      "if",
+      "important"
+    ]
+  ],
+  "sample.templ": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "<article class",
+      "project",
+      "string"
+    ],
+    [
+      "fmt.Sprintf",
+      "Project:",
+      "string"
+    ],
+    [
+      "if active",
+      "if",
+      "important"
+    ]
+  ],
+  "sample.bib": [
+    [
+      "title =",
+      "eenei preview",
+      "string",
+      {
+        "italic": false
+      }
+    ],
+    [
+      "year =",
+      "2026",
+      "regular"
+    ],
+    [
+      "note =",
+      "nested",
+      "string"
+    ]
+  ],
+  "sample.coffee": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if active",
+      "if",
+      "important"
+    ],
+    [
+      "\"Project:",
+      "Project:",
+      "string"
+    ]
+  ],
+  "sample.cu": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if (index",
+      "if",
+      "important"
+    ],
+    [
+      "const char*",
+      "eenei",
+      "string"
+    ]
+  ],
+  "sample.fs": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if active",
+      "if",
+      "important"
+    ],
+    [
+      "\"Project:",
+      "Project:",
+      "string"
+    ]
+  ],
+  "sample.groovy": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if (active)",
+      "if",
+      "important"
+    ],
+    [
+      "return \"Project:",
+      "Project:",
+      "string"
+    ]
+  ],
+  "sample.hbs": [
+    [
+      "{{! Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "<h1 class",
+      "project",
+      "string"
+    ],
+    [
+      "{{#if active",
+      "active",
+      "regular"
+    ]
+  ],
+  "sample.hlsl": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if (position",
+      "if",
+      "important"
+    ],
+    [
+      "return float4(0.5",
+      "0.5",
+      "regular"
+    ]
+  ],
+  "sample.pug": [
+    [
+      "//- Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if active",
+      "if",
+      "important"
+    ],
+    [
+      "h1.project",
+      "eenei",
+      "string"
+    ]
+  ],
+  "sample.jsonl": [
+    [
+      "\"eenei\"",
+      "eenei",
+      "string",
+      {
+        "italic": false
+      }
+    ],
+    [
+      "\"eenei\"",
+      "name",
+      "regular"
+    ],
+    [
+      "\"eenei\"",
+      "42",
+      "regular"
+    ]
+  ],
+  "sample.jl": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if active",
+      "if",
+      "important"
+    ],
+    [
+      "return \"Project:",
+      "Project:",
+      "string"
+    ]
+  ],
+  "sample.tex": [
+    [
+      "% Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "\\section{",
+      "{",
+      "insignificant"
+    ],
+    [
+      "\\section{",
+      "eenei",
+      "regular"
+    ]
+  ],
+  "sample.log": [
+    [
+      "[info]",
+      "eenei",
+      "regular",
+      {
+        "italic": false
+      }
+    ]
+  ],
+  "sample.mm": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if (active)",
+      "if",
+      "important"
+    ],
+    [
+      "if (active)",
+      "eenei",
+      "string"
+    ]
+  ],
+  "sample.pl": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if ($active)",
+      "if",
+      "important"
+    ],
+    [
+      "return \"Project:",
+      "Project:",
+      "string"
+    ]
+  ],
+  "sample.R": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if (active)",
+      "if",
+      "important"
+    ],
+    [
+      "return(paste",
+      "Project:",
+      "string"
+    ]
+  ],
+  "sample.raku": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if $active",
+      "if",
+      "important"
+    ],
+    [
+      "return \"Project:",
+      "Project:",
+      "string"
+    ]
+  ],
+  "sample.cshtml": [
+    [
+      "@* Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "var name",
+      "eenei",
+      "string"
+    ],
+    [
+      "<h1 class",
+      "project",
+      "string"
+    ]
+  ],
+  "sample.shader": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "Shader \"",
+      "eenei/Preview",
+      "string"
+    ],
+    [
+      "Properties",
+      "Preview color",
+      "string"
+    ]
+  ],
+  "sample.swift": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if active",
+      "if",
+      "important"
+    ],
+    [
+      "return \"Project:",
+      "Project:",
+      "string"
+    ]
+  ],
+  "sample.vb": [
+    [
+      "' Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "If active Then",
+      "If",
+      "important"
+    ],
+    [
+      "Return \"Project:",
+      "Project:",
+      "string"
+    ]
+  ],
+  "sample.xsl": [
+    [
+      "<!-- Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "<h1 class",
+      "project",
+      "string"
+    ]
+  ],
+  "sample.jinja": [
+    [
+      "{# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "{% for",
+      "for",
+      "important"
+    ],
+    [
+      "{{ \"Project:",
+      "Project:",
+      "string"
+    ]
+  ],
+  "sample.yaml.jinja": [
+    [
+      "{# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "name: \"",
+      "eenei",
+      "string"
+    ],
+    [
+      "{% if",
+      "if",
+      "important"
+    ]
+  ],
+  "sample.sty": [
+    [
+      "% Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "projectname{",
+      "eenei",
+      "regular"
+    ]
+  ],
+  "tests/fixtures/git/COMMIT_EDITMSG": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "Add project",
+      "Add project",
+      "regular"
+    ]
+  ],
+  "tests/fixtures/git/git-rebase-todo": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "pick a1",
+      "pick",
+      "regular"
+    ]
+  ],
+  "tests/fixtures/config/preview.properties": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "project.name",
+      "eenei",
+      "string"
+    ]
+  ],
+  "tests/fixtures/config/preview.code-snippets": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "\"description\"",
+      "eenei",
+      "string"
+    ]
+  ],
+  "tests/fixtures/editor/preview.code-search": [
+    [
+      "# Query:",
+      "Query",
+      "insignificant",
+      {
+        "italic": false
+      }
+    ],
+    [
+      "2: print",
+      "eenei",
+      "string"
+    ]
+  ],
+  "tests/fixtures/editor/preview.prompt.md": [
+    [
+      "# Project preview",
+      "Project preview",
+      "important",
+      {
+        "bold": true
+      }
+    ],
+    [
+      "This is inert",
+      "compose.yaml",
+      "string"
+    ]
+  ],
+  "tests/fixtures/editor/preview.instructions.md": [
+    [
+      "# Project preview",
+      "Project preview",
+      "important",
+      {
+        "bold": true
+      }
+    ],
+    [
+      "This is inert",
+      "compose.yaml",
+      "string"
+    ]
+  ],
+  "tests/fixtures/editor/preview.agent.md": [
+    [
+      "# Project preview",
+      "Project preview",
+      "important",
+      {
+        "bold": true
+      }
+    ],
+    [
+      "This is inert",
+      "compose.yaml",
+      "string"
+    ]
+  ],
+  "tests/fixtures/editor/SKILL.md": [
+    [
+      "# Project preview",
+      "Project preview",
+      "important",
+      {
+        "bold": true
+      }
+    ],
+    [
+      "This is inert",
+      "compose.yaml",
+      "string"
+    ]
+  ],
+  "tests/fixtures/embedded/cpp.tex": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if (active)",
+      "if",
+      "important"
+    ],
+    [
+      "if (active)",
+      "eenei",
+      "string"
+    ]
+  ],
+  "tests/fixtures/embedded/markdown.tex": [
+    [
+      "# Project preview",
+      "Project preview",
+      "important",
+      {
+        "bold": true
+      }
+    ],
+    [
+      "Use **bold**",
+      "compose.yaml",
+      "string"
+    ]
+  ],
+  "tests/fixtures/embedded/math.md": [
+    [
+      "% Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "x + 42",
+      "42",
+      "regular"
+    ]
+  ],
+  "tests/fixtures/extensions/preview.hpp": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "struct Project",
+      "eenei",
+      "string"
+    ]
+  ],
+  "tests/fixtures/config/Jenkinsfile": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "stages {",
+      "eenei",
+      "string"
+    ]
+  ],
+  "sample.jmd": [
+    [
+      "# Project preview",
+      "Project preview",
+      "important",
+      {
+        "bold": true
+      }
+    ],
+    [
+      "Use **bold**",
+      "compose.yaml",
+      "string"
+    ],
+    [
+      "# Preview active",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "println(",
+      "eenei",
+      "string"
+    ]
+  ],
+  "tests/fixtures/embedded/macros.cpp": [
+    [
+      "/* Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "((active) ?",
+      "eenei",
+      "string"
+    ],
+    [
+      "if (!(value))",
+      "if",
+      "important"
+    ],
+    [
+      "if (!(value))",
+      "return",
+      "important"
+    ],
+    [
+      "if (!(value))",
+      "value",
+      "regular"
+    ],
+    [
+      "if (!(value))",
+      "!",
+      "regular"
+    ],
+    [
+      "} while (0)",
+      "0",
+      "regular"
+    ]
+  ],
+  "tests/fixtures/embedded/code.php": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if ($project",
+      "if",
+      "important"
+    ],
+    [
+      "return \"Project:",
+      "Project:",
+      "string"
+    ],
+    [
+      "return \"Project:",
+      "project",
+      "regular"
+    ],
+    [
+      "return 'Archived'",
+      "Archived",
+      "string"
+    ]
+  ],
+  "tests/fixtures/extensions/preview.cmd": [
+    [
+      "rem Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "set \"PROJECT",
+      "eenei",
+      "string"
+    ],
+    [
+      "if defined",
+      "if",
+      "important"
+    ]
+  ],
+  "tests/fixtures/extensions/preview.gql": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "projects(name",
+      "eenei",
+      "string"
+    ],
+    [
+      "query Projects",
+      "Projects",
+      "regular"
+    ]
+  ],
+  "tests/fixtures/extensions/preview.graphqls": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "\"Project preview.\"",
+      "Project preview.",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "type Project",
+      "Project",
+      "regular"
+    ]
+  ],
+  "tests/fixtures/extensions/preview.exs": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "name =",
+      "eenei",
+      "string"
+    ],
+    [
+      "if String",
+      "if",
+      "important"
+    ]
+  ],
+  "tests/fixtures/config/mix.lock": [
+    [
+      "# Lockfile",
+      "Lockfile",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "%{\"theme_lab\"",
+      "theme_lab",
+      "string"
+    ],
+    [
+      "%{\"theme_lab\"",
+      "0.1.0",
+      "string"
+    ]
+  ],
+  "sample.zig": [
+    [
+      "const std =",
+      "@import",
+      "insignificant"
+    ],
+    [
+      "const std =",
+      "std",
+      "regular"
+    ],
+    [
+      "const std =",
+      "std\"",
+      "string"
+    ],
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "/// Return",
+      "Return",
+      "docComment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "/// Return",
+      "///",
+      "docComment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "if (!project.active)",
+      "if",
+      "important"
+    ],
+    [
+      "if (!project.active)",
+      "!",
+      "regular"
+    ],
+    [
+      "if (!project.active)",
+      "return",
+      "important"
+    ],
+    [
+      "pub fn label",
+      "fn",
+      "insignificant"
+    ],
+    [
+      "pub fn label",
+      "Project",
+      "regular"
+    ],
+    [
+      "pub fn label",
+      "label",
+      "regular"
+    ],
+    [
+      "const escaped",
+      "\\n",
+      "string"
+    ],
+    [
+      "\\\\Project preview",
+      "Project preview",
+      "string"
+    ],
+    [
+      "const scale",
+      "1.5e2",
+      "regular"
+    ],
+    [
+      "const name = try",
+      "try",
+      "important"
+    ],
+    [
+      "const name = try",
+      "name",
+      "regular"
+    ],
+    [
+      "const project = Project",
+      "eenei",
+      "string"
+    ],
+    [
+      "for ([_]u8",
+      "for",
+      "important"
+    ],
+    [
+      "count += value",
+      "+=",
+      "regular"
+    ],
+    [
+      "expect(count >",
+      ">",
+      "regular"
+    ],
+    [
+      "expect(count >",
+      "and",
+      "regular"
+    ],
+    [
+      "const max_count",
+      "@as",
+      "regular"
+    ],
+    [
+      "test \"project label\"",
+      "test",
+      "insignificant"
+    ]
+  ],
+  "sample.nix": [
+    [
+      "# Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "/* A block",
+      "block comment",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "title = if",
+      "if",
+      "important"
+    ],
+    [
+      "title = if",
+      "then",
+      "important"
+    ],
+    [
+      "title = if",
+      "else",
+      "important"
+    ],
+    [
+      "title = if",
+      "Project:",
+      "string"
+    ],
+    [
+      "title = if",
+      "name",
+      "regular"
+    ],
+    [
+      "{ name ?",
+      "eenei",
+      "string"
+    ],
+    [
+      "path =",
+      "./sample.nix",
+      "string"
+    ],
+    [
+      "escaped =",
+      "project",
+      "string"
+    ],
+    [
+      "Project preview:",
+      "Project preview:",
+      "string"
+    ],
+    [
+      "Project preview:",
+      "title",
+      "regular"
+    ],
+    [
+      "# This hash",
+      "This hash",
+      "string",
+      {
+        "italic": false
+      }
+    ],
+    [
+      "inherit title",
+      "inherit",
+      "insignificant"
+    ],
+    [
+      "inherit title",
+      "title",
+      "regular"
+    ],
+    [
+      "enabled =",
+      "&&",
+      "regular"
+    ],
+    [
+      "enabled =",
+      ">",
+      "regular"
+    ],
+    [
+      "sum =",
+      "+",
+      "regular"
+    ],
+    [
+      "count = 42",
+      "42",
+      "regular"
+    ],
+    [
+      "negative =",
+      "-",
+      "regular"
+    ],
+    [
+      "notActive =",
+      "!",
+      "regular"
+    ],
+    [
+      "path =",
+      "path",
+      "regular"
+    ],
+    [
+      "path =",
+      "=",
+      "insignificant"
+    ]
+  ],
+  "tests/fixtures/config/build.zig.zon": [
+    [
+      "// Preview",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      ".version =",
+      "0.1.0",
+      "string"
+    ],
+    [
+      ".name =",
+      "theme_lab",
+      "regular"
+    ]
+  ],
+  "tests/fixtures/embedded/nix.md": [
+    [
+      "# Preview embedded",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "let name =",
+      "eenei",
+      "string"
+    ],
+    [
+      "let name =",
+      "name}",
+      "regular"
+    ]
+  ],
+  "tests/fixtures/embedded/zig.md": [
+    [
+      "// Preview embedded",
+      "Preview",
+      "comment",
+      {
+        "italic": true
+      }
+    ],
+    [
+      "const name =",
+      "eenei",
+      "string"
+    ],
+    [
+      "if (active)",
+      "if",
+      "important"
+    ]
+  ]
+}

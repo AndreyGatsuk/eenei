@@ -1,0 +1,7 @@
+.{
+    // Preview package manifest.
+    .name = .theme_lab,
+    .version = "0.1.0",
+    .paths = .{"."},
+    .dependencies = .{},
+}

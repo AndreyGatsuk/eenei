@@ -1,0 +1,16 @@
+@gap: 1rem;
+@accent: #83b8d6;
+
+// Parameters, nested rules and guarded mixins.
+.panel(@space) when (@space > 0) {
+  display: grid;
+  gap: @space;
+}
+
+.project {
+  .panel(@gap);
+  color: @accent;
+  &::after { content: "Ready"; }
+  &:hover { opacity: 0.8; }
+  &__title { font-weight: bold; }
+}

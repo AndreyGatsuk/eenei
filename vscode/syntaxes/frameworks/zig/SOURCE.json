@@ -1,0 +1,79 @@
+{
+  "id": "zig",
+  "scope": "source.zig",
+  "sample": "sample.zig",
+  "extension": "ziglang.vscode-zig",
+  "repository": "https://codeberg.org/ziglang/vscode-zig",
+  "grammars": [
+    {
+      "scopeName": "source.zig",
+      "url": "https://codeberg.org/ziglang/vscode-zig/raw/commit/fa8e2c7dc44cb8e3f6cf97a4273b6ca1e202c02c/syntaxes/zig.tmLanguage.json",
+      "format": "textmate",
+      "injectTo": [],
+      "contribution": {
+        "language": "zig",
+        "scopeName": "source.zig"
+      },
+      "patches": [
+        {
+          "find": {
+            "name": "keyword.default.zig",
+            "match": "\\b(test|and|or)\\b"
+          },
+          "replace": {
+            "match": "\\b(?:(test)|(and|or))\\b",
+            "captures": {
+              "1": {
+                "name": "keyword.default.zig"
+              },
+              "2": {
+                "name": "keyword.operator.logical.zig"
+              }
+            }
+          },
+          "reason": "Keep test scaffolding muted while logical and/or operators use regular text."
+        },
+        {
+          "find": {
+            "name": "support.function.builtin.zig",
+            "match": "@[_a-zA-Z][_a-zA-Z0-9]*"
+          },
+          "replace": {
+            "match": "(@import\\b)|(@[_a-zA-Z][_a-zA-Z0-9]*)",
+            "captures": {
+              "1": {
+                "name": "keyword.control.import.zig"
+              }
+            }
+          },
+          "reason": "Mute @import like other imports while keeping ordinary builtin function names regular."
+        }
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "id": "zig",
+      "extensions": [
+        ".zig",
+        ".zon"
+      ],
+      "aliases": [
+        "Zig"
+      ],
+      "configuration": "./syntaxes/frameworks/zig/zig.language-configuration.json"
+    }
+  ],
+  "configurations": [
+    {
+      "source": "https://codeberg.org/ziglang/vscode-zig/raw/commit/fa8e2c7dc44cb8e3f6cf97a4273b6ca1e202c02c/language-configuration.json",
+      "filename": "zig.language-configuration.json"
+    }
+  ],
+  "licenses": [
+    {
+      "source": "https://codeberg.org/ziglang/vscode-zig/raw/commit/fa8e2c7dc44cb8e3f6cf97a4273b6ca1e202c02c/LICENSE",
+      "filename": "LICENSE.txt"
+    }
+  ]
+}

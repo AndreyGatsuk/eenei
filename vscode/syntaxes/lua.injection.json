@@ -1,0 +1,14 @@
+{
+  "scopeName": "theme-lab.injection.lua",
+  "injectionSelector": "L:source.lua -comment -string",
+  "patterns": [
+    {
+      "name": "keyword.operator.arithmetic.lua",
+      "match": "//|<<|>>|==|~=|<=|>=|(?<!\\.)\\.{2}(?!\\.)|(?<!-)-(?!-)|[+*/%^#&|~<>]"
+    },
+    {
+      "name": "punctuation.separator.lua",
+      "match": "[{};,]"
+    }
+  ]
+}

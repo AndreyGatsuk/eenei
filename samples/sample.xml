@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Preview the active projects. -->
+<projects xmlns="https://example.com/projects">
+  <project active="true" limit="42">
+    <name>eenei</name>
+    <description><![CDATA[Preview <content>]]></description>
+  </project>
+</projects>

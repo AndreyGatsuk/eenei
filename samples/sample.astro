@@ -1,0 +1,14 @@
+---
+const name = "Navigate";
+const active = true;
+---
+
+<!-- Frontmatter, HTML and JavaScript expressions. -->
+<section>
+  <h1>{name}</h1>
+  {active && <p class="status">Active project</p>}
+</section>
+
+<style>
+  .status { color: var(--accent); }
+</style>

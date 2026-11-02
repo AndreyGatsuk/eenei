@@ -1,0 +1,971 @@
+[
+  {
+    "id": "vue",
+    "scope": "text.html.vue",
+    "sample": "sample.vue",
+    "extension": "Vue.volar",
+    "repository": "https://github.com/vuejs/language-tools",
+    "grammars": [
+      {
+        "scopeName": "text.html.vue",
+        "url": "https://raw.githubusercontent.com/vuejs/language-tools/c59f9908b4912ee20141b53a99b1ce485bff0dc7/extensions/vscode/syntaxes/vue.tmLanguage.json",
+        "format": "textmate",
+        "injectTo": [],
+        "contribution": {
+          "language": "vue",
+          "scopeName": "text.html.vue",
+          "embeddedLanguages": {
+            "text.html.vue": "vue",
+            "text": "plaintext",
+            "text.html.derivative": "html",
+            "text.html.markdown": "markdown",
+            "text.pug": "jade",
+            "source.css": "css",
+            "source.css.scss": "scss",
+            "source.css.less": "less",
+            "source.sass": "sass",
+            "source.stylus": "stylus",
+            "source.postcss": "postcss",
+            "source.js": "javascript",
+            "source.ts": "typescript",
+            "source.js.jsx": "javascriptreact",
+            "source.tsx": "typescriptreact",
+            "source.coffee": "coffeescript",
+            "meta.tag.js": "jsx-tags",
+            "meta.tag.tsx": "jsx-tags",
+            "meta.tag.without-attributes.js": "jsx-tags",
+            "meta.tag.without-attributes.tsx": "jsx-tags",
+            "source.json": "json",
+            "source.json.comments": "jsonc",
+            "source.json5": "json5",
+            "source.yaml": "yaml",
+            "source.toml": "toml",
+            "source.graphql": "graphql"
+          },
+          "unbalancedBracketScopes": [
+            "keyword.operator.relational",
+            "storage.type.function.arrow",
+            "keyword.operator.bitwise.shift",
+            "meta.brace.angle",
+            "punctuation.definition.tag"
+          ]
+        }
+      },
+      {
+        "scopeName": "vue.directives",
+        "url": "https://raw.githubusercontent.com/vuejs/language-tools/c59f9908b4912ee20141b53a99b1ce485bff0dc7/extensions/vscode/syntaxes/vue-directives.json",
+        "format": "textmate",
+        "injectTo": [
+          "text.html.vue",
+          "text.html.markdown",
+          "text.html.derivative",
+          "text.pug"
+        ],
+        "contribution": {
+          "scopeName": "vue.directives",
+          "injectTo": [
+            "text.html.vue",
+            "text.html.markdown",
+            "text.html.derivative",
+            "text.pug"
+          ]
+        }
+      },
+      {
+        "scopeName": "vue.interpolations",
+        "url": "https://raw.githubusercontent.com/vuejs/language-tools/c59f9908b4912ee20141b53a99b1ce485bff0dc7/extensions/vscode/syntaxes/vue-interpolations.json",
+        "format": "textmate",
+        "injectTo": [
+          "text.html.vue",
+          "text.html.markdown",
+          "text.html.derivative",
+          "text.pug"
+        ],
+        "contribution": {
+          "scopeName": "vue.interpolations",
+          "injectTo": [
+            "text.html.vue",
+            "text.html.markdown",
+            "text.html.derivative",
+            "text.pug"
+          ]
+        }
+      },
+      {
+        "scopeName": "vue.sfc.script.leading-operator-fix",
+        "url": "https://raw.githubusercontent.com/vuejs/language-tools/c59f9908b4912ee20141b53a99b1ce485bff0dc7/extensions/vscode/syntaxes/vue-sfc-script-leading-operator-fix.json",
+        "format": "textmate",
+        "injectTo": [
+          "text.html.vue"
+        ],
+        "contribution": {
+          "scopeName": "vue.sfc.script.leading-operator-fix",
+          "injectTo": [
+            "text.html.vue"
+          ]
+        }
+      },
+      {
+        "scopeName": "vue.sfc.style.variable.injection",
+        "url": "https://raw.githubusercontent.com/vuejs/language-tools/c59f9908b4912ee20141b53a99b1ce485bff0dc7/extensions/vscode/syntaxes/vue-sfc-style-variable-injection.json",
+        "format": "textmate",
+        "injectTo": [
+          "text.html.vue"
+        ],
+        "contribution": {
+          "scopeName": "vue.sfc.style.variable.injection",
+          "injectTo": [
+            "text.html.vue"
+          ]
+        }
+      }
+    ],
+    "languages": [
+      {
+        "id": "vue",
+        "extensions": [
+          ".vue"
+        ],
+        "configuration": "./syntaxes/frameworks/vue/vue.language-configuration.json"
+      }
+    ],
+    "configurations": [
+      {
+        "source": "https://raw.githubusercontent.com/vuejs/language-tools/c59f9908b4912ee20141b53a99b1ce485bff0dc7/extensions/vscode/languages/vue-language-configuration.json",
+        "filename": "vue.language-configuration.json"
+      }
+    ],
+    "licenses": [
+      {
+        "source": "https://raw.githubusercontent.com/vuejs/language-tools/c59f9908b4912ee20141b53a99b1ce485bff0dc7/extensions/vscode/LICENSE",
+        "filename": "LICENSE.txt"
+      }
+    ]
+  },
+  {
+    "id": "svelte",
+    "scope": "source.svelte",
+    "sample": "sample.svelte",
+    "extension": "svelte.svelte-vscode",
+    "repository": "https://github.com/sveltejs/language-tools",
+    "grammars": [
+      {
+        "scopeName": "source.svelte",
+        "url": "https://raw.githubusercontent.com/sveltejs/language-tools/fda3f39950e71d3371fdc9ebc811c444b8714ad4/packages/svelte-vscode/syntaxes/svelte.tmLanguage.src.yaml",
+        "format": "yaml",
+        "injectTo": [],
+        "contribution": {
+          "language": "svelte",
+          "scopeName": "source.svelte",
+          "embeddedLanguages": {
+            "text.html.basic": "html",
+            "text.html.markdown": "markdown",
+            "text.pug": "jade",
+            "meta.tag.start.svelte": "svelte-start-tag",
+            "punctuation.definition.tag.begin.svelte": "svelte",
+            "source.css": "css",
+            "source.css.less": "less",
+            "source.css.scss": "scss",
+            "source.css.postcss": "postcss",
+            "source.sass": "sass",
+            "source.stylus": "stylus",
+            "source.js": "javascript",
+            "source.ts": "typescript",
+            "source.coffee": "coffeescript"
+          },
+          "unbalancedBracketScopes": [
+            "keyword.operator.relational",
+            "storage.type.function.arrow",
+            "keyword.operator.bitwise.shift",
+            "meta.brace.angle",
+            "punctuation.definition.tag"
+          ],
+          "tokenTypes": {
+            "punctuation.definition.template-expression": "other",
+            "entity.name.type.instance.jsdoc": "other",
+            "entity.name.function.tagged-template": "other",
+            "meta.import string.quoted": "other",
+            "variable.other.jsdoc": "other"
+          }
+        }
+      },
+      {
+        "scopeName": "source.css.postcss",
+        "url": "https://raw.githubusercontent.com/sveltejs/language-tools/fda3f39950e71d3371fdc9ebc811c444b8714ad4/packages/svelte-vscode/syntaxes/postcss.src.yaml",
+        "format": "yaml",
+        "injectTo": [
+          "source.svelte"
+        ],
+        "contribution": {
+          "scopeName": "source.css.postcss",
+          "injectTo": [
+            "source.svelte"
+          ]
+        }
+      }
+    ],
+    "languages": [
+      {
+        "id": "svelte",
+        "aliases": [
+          "Svelte",
+          "svelte"
+        ],
+        "extensions": [
+          ".svelte"
+        ],
+        "configuration": "./syntaxes/frameworks/svelte/svelte.language-configuration.json"
+      }
+    ],
+    "configurations": [
+      {
+        "source": "https://raw.githubusercontent.com/sveltejs/language-tools/fda3f39950e71d3371fdc9ebc811c444b8714ad4/packages/svelte-vscode/language-configuration.json",
+        "filename": "svelte.language-configuration.json"
+      }
+    ],
+    "licenses": [
+      {
+        "source": "https://raw.githubusercontent.com/sveltejs/language-tools/fda3f39950e71d3371fdc9ebc811c444b8714ad4/LICENSE",
+        "filename": "LICENSE.txt"
+      }
+    ]
+  },
+  {
+    "id": "astro",
+    "scope": "source.astro",
+    "sample": "sample.astro",
+    "extension": "astro-build.astro-vscode",
+    "repository": "https://github.com/withastro/astro",
+    "grammars": [
+      {
+        "scopeName": "source.astro",
+        "url": "https://raw.githubusercontent.com/withastro/astro/10dae2f31486cc0a6a04d1f3d7f5ab7fa8889b30/packages/language-tools/vscode/syntaxes/astro.tmLanguage.json",
+        "format": "textmate",
+        "injectTo": [],
+        "contribution": {
+          "language": "astro",
+          "scopeName": "source.astro",
+          "embeddedLanguages": {
+            "text.html": "html",
+            "text.html.markdown": "markdown",
+            "source.css": "css",
+            "source.css.less": "less",
+            "source.css.scss": "scss",
+            "source.sass": "sass",
+            "source.stylus": "stylus",
+            "source.js": "javascript",
+            "source.ts": "typescript",
+            "source.json": "json",
+            "source.tsx": "typescriptreact",
+            "meta.tag.tsx": "jsx-tags",
+            "meta.tag.without-attributes.tsx": "jsx-tags",
+            "meta.tag.attributes.tsx": "typescriptreact",
+            "meta.embedded.expression.tsx": "typescriptreact"
+          },
+          "unbalancedBracketScopes": [
+            "keyword.operator.relational",
+            "storage.type.function.arrow",
+            "keyword.operator.bitwise.shift",
+            "meta.brace.angle",
+            "punctuation.definition.tag",
+            "keyword.operator.assignment.compound.bitwise.ts"
+          ]
+        }
+      }
+    ],
+    "languages": [
+      {
+        "id": "astro",
+        "extensions": [
+          ".astro"
+        ],
+        "aliases": [
+          "Astro"
+        ],
+        "configuration": "./syntaxes/frameworks/astro/astro.language-configuration.json"
+      }
+    ],
+    "configurations": [
+      {
+        "source": "https://raw.githubusercontent.com/withastro/astro/10dae2f31486cc0a6a04d1f3d7f5ab7fa8889b30/packages/language-tools/vscode/languages/astro-language-configuration.json",
+        "filename": "astro.language-configuration.json"
+      }
+    ],
+    "licenses": [
+      {
+        "source": "https://raw.githubusercontent.com/withastro/astro/10dae2f31486cc0a6a04d1f3d7f5ab7fa8889b30/packages/language-tools/vscode/LICENSE",
+        "filename": "LICENSE.txt"
+      }
+    ]
+  },
+  {
+    "id": "mdx",
+    "scope": "source.mdx",
+    "sample": "sample.mdx",
+    "extension": "unifiedjs.vscode-mdx",
+    "repository": "https://github.com/mdx-js/mdx-analyzer",
+    "grammars": [
+      {
+        "scopeName": "source.mdx",
+        "url": "https://raw.githubusercontent.com/mdx-js/mdx-analyzer/dde34ef0e72b2f2f36649b8831087842d5c12c3b/packages/vscode-mdx/syntaxes/source.mdx.tmLanguage",
+        "format": "textmate",
+        "injectTo": [],
+        "contribution": {
+          "language": "mdx",
+          "scopeName": "source.mdx",
+          "embeddedLanguages": {
+            "meta.embedded.c": "c",
+            "meta.embedded.cpp": "cpp",
+            "meta.embedded.cs": "csharp",
+            "meta.embedded.css": "css",
+            "meta.embedded.diff": "diff",
+            "meta.embedded.go": "go",
+            "meta.embedded.graphql": "graphql",
+            "meta.embedded.html": "html",
+            "meta.embedded.ini": "ini",
+            "meta.embedded.java": "java",
+            "meta.embedded.js": "javascriptreact",
+            "meta.embedded.json": "json",
+            "meta.embedded.kotlin": "kotlin",
+            "meta.embedded.less": "less",
+            "meta.embedded.lua": "lua",
+            "meta.embedded.makefile": "makefile",
+            "meta.embedded.md": "markdown",
+            "meta.embedded.mdx": "mdx",
+            "meta.embedded.objc": "objective-c",
+            "meta.embedded.perl": "perl",
+            "meta.embedded.php": "php",
+            "meta.embedded.python": "python",
+            "meta.embedded.r": "r",
+            "meta.embedded.ruby": "ruby",
+            "meta.embedded.rust": "rust",
+            "meta.embedded.scss": "scss",
+            "meta.embedded.shell": "shellscript",
+            "meta.embedded.sql": "sql",
+            "meta.embedded.svg": "xml",
+            "meta.embedded.swift": "swift",
+            "meta.embedded.toml": "toml",
+            "meta.embedded.ts": "typescriptreact",
+            "meta.embedded.tsx": "typescriptreact",
+            "meta.embedded.vbnet": "vb",
+            "meta.embedded.xml": "xml",
+            "meta.embedded.yaml": "yaml"
+          }
+        }
+      }
+    ],
+    "languages": [
+      {
+        "id": "mdx",
+        "aliases": [
+          "MDX"
+        ],
+        "extensions": [
+          ".mdx"
+        ],
+        "configuration": "./syntaxes/frameworks/mdx/mdx.language-configuration.json"
+      }
+    ],
+    "configurations": [
+      {
+        "source": "https://raw.githubusercontent.com/mdx-js/mdx-analyzer/dde34ef0e72b2f2f36649b8831087842d5c12c3b/packages/vscode-mdx/language-configuration.json",
+        "filename": "mdx.language-configuration.json"
+      }
+    ],
+    "licenses": [
+      {
+        "source": "https://raw.githubusercontent.com/mdx-js/mdx-analyzer/dde34ef0e72b2f2f36649b8831087842d5c12c3b/packages/vscode-mdx/LICENSE",
+        "filename": "LICENSE.txt"
+      }
+    ]
+  },
+  {
+    "id": "jinja",
+    "scope": "text.html.jinja",
+    "sample": "sample.html.jinja",
+    "extension": "wholroyd.jinja",
+    "repository": "https://github.com/wholroyd/vscode-jinja",
+    "grammars": [
+      {
+        "scopeName": "text.html.jinja",
+        "url": "https://raw.githubusercontent.com/wholroyd/vscode-jinja/eda5ffe57277affc0bf3572abdc1f543ac97d868/syntaxes/jinja-html.json",
+        "format": "textmate",
+        "injectTo": [],
+        "contribution": {
+          "language": "jinja-html",
+          "scopeName": "text.html.jinja",
+          "embeddedLanguages": {
+            "source.js": "javascript",
+            "source.css": "css"
+          }
+        }
+      },
+      {
+        "scopeName": "text.yaml.jinja",
+        "url": "https://raw.githubusercontent.com/wholroyd/vscode-jinja/eda5ffe57277affc0bf3572abdc1f543ac97d868/syntaxes/jinja-yaml.json",
+        "format": "textmate",
+        "injectTo": [],
+        "contribution": {
+          "language": "jinja-yaml",
+          "scopeName": "text.yaml.jinja"
+        }
+      },
+      {
+        "scopeName": "source.jinja",
+        "url": "https://raw.githubusercontent.com/wholroyd/vscode-jinja/eda5ffe57277affc0bf3572abdc1f543ac97d868/syntaxes/jinja.json",
+        "format": "textmate",
+        "injectTo": [],
+        "contribution": {
+          "language": "jinja",
+          "scopeName": "source.jinja"
+        }
+      }
+    ],
+    "languages": [
+      {
+        "id": "jinja-html",
+        "aliases": [
+          "Jinja HTML",
+          "jinja-html"
+        ],
+        "extensions": [
+          ".html.j2",
+          ".html.jinja",
+          ".html.jinja2"
+        ],
+        "configuration": "./syntaxes/frameworks/jinja/jinja-html.language-configuration.json"
+      },
+      {
+        "id": "jinja-yaml",
+        "aliases": [
+          "Jinja YAML",
+          "jinja-yaml"
+        ],
+        "extensions": [
+          ".yml.j2",
+          ".yml.jinja",
+          ".yml.jinja2",
+          ".yaml.j2",
+          ".yaml.jinja",
+          ".yaml.jinja2",
+          ".sls"
+        ],
+        "configuration": "./syntaxes/frameworks/jinja/jinja-yaml.language-configuration.json"
+      },
+      {
+        "id": "jinja",
+        "aliases": [
+          "Jinja"
+        ],
+        "extensions": [
+          ".j2",
+          ".jinja",
+          ".jinja2"
+        ],
+        "configuration": "./syntaxes/frameworks/jinja/jinja.language-configuration.json"
+      }
+    ],
+    "configurations": [
+      {
+        "source": "https://raw.githubusercontent.com/wholroyd/vscode-jinja/eda5ffe57277affc0bf3572abdc1f543ac97d868/jinja-html.configuration.json",
+        "filename": "jinja-html.language-configuration.json"
+      },
+      {
+        "source": "https://raw.githubusercontent.com/wholroyd/vscode-jinja/eda5ffe57277affc0bf3572abdc1f543ac97d868/jinja-yaml.configuration.json",
+        "filename": "jinja-yaml.language-configuration.json"
+      },
+      {
+        "source": "https://raw.githubusercontent.com/wholroyd/vscode-jinja/eda5ffe57277affc0bf3572abdc1f543ac97d868/jinja.configuration.json",
+        "filename": "jinja.language-configuration.json"
+      }
+    ],
+    "licenses": [
+      {
+        "source": "https://raw.githubusercontent.com/wholroyd/vscode-jinja/eda5ffe57277affc0bf3572abdc1f543ac97d868/LICENSE",
+        "filename": "LICENSE.txt"
+      }
+    ]
+  },
+  {
+    "id": "graphql",
+    "scope": "source.graphql",
+    "sample": "sample.graphql",
+    "extension": "GraphQL.vscode-graphql",
+    "repository": "https://github.com/graphql/vscode-graphql",
+    "grammars": [
+      {
+        "scopeName": "source.graphql",
+        "url": "https://raw.githubusercontent.com/graphql/vscode-graphql/66e9d69b76c237714db0e606fa7ac32fc4fa3a94/grammars/graphql.json",
+        "format": "textmate",
+        "injectTo": [],
+        "contribution": {
+          "language": "graphql",
+          "scopeName": "source.graphql"
+        }
+      }
+    ],
+    "languages": [
+      {
+        "id": "graphql",
+        "extensions": [
+          ".gql",
+          ".graphql",
+          ".graphqls"
+        ],
+        "aliases": [
+          "GraphQL",
+          "graphql"
+        ],
+        "configuration": "./syntaxes/frameworks/graphql/graphql.language-configuration.json"
+      }
+    ],
+    "configurations": [
+      {
+        "source": "https://raw.githubusercontent.com/graphql/vscode-graphql/66e9d69b76c237714db0e606fa7ac32fc4fa3a94/language/language-configuration.json",
+        "filename": "graphql.language-configuration.json"
+      }
+    ],
+    "licenses": [
+      {
+        "source": "https://raw.githubusercontent.com/graphql/vscode-graphql/66e9d69b76c237714db0e606fa7ac32fc4fa3a94/LICENSE",
+        "filename": "LICENSE.txt"
+      }
+    ]
+  },
+  {
+    "id": "elixir",
+    "scope": "source.elixir",
+    "sample": "sample.ex",
+    "extension": "JakeBecker.elixir-ls",
+    "repository": "https://github.com/elixir-lsp/vscode-elixir-ls",
+    "grammars": [
+      {
+        "scopeName": "source.elixir",
+        "url": "https://raw.githubusercontent.com/elixir-lsp/vscode-elixir-ls/72c89d1cc38e9e4a4c54d6715e4372338df976e7/syntaxes/elixir.json",
+        "format": "textmate",
+        "injectTo": [],
+        "contribution": {
+          "language": "elixir",
+          "scopeName": "source.elixir",
+          "unbalancedBracketScopes": [
+            "keyword.operator.bitwise.elixir",
+            "keyword.operator.other.unbalanced.elixir",
+            "constant.language.symbol.elixir",
+            "constant.language.symbol.single-quoted.elixir",
+            "constant.language.symbol.double-quoted.elixir",
+            "entity.name.function.call.dot.elixir"
+          ],
+          "embeddedLanguages": {
+            "comment.documentation.heredoc.elixir": "markdown"
+          }
+        }
+      }
+    ],
+    "languages": [
+      {
+        "id": "elixir",
+        "aliases": [
+          "Elixir",
+          "elixir"
+        ],
+        "extensions": [
+          ".ex",
+          ".exs"
+        ],
+        "filenames": [
+          "mix.lock"
+        ],
+        "configuration": "./syntaxes/frameworks/elixir/elixir.language-configuration.json"
+      }
+    ],
+    "configurations": [
+      {
+        "source": "https://raw.githubusercontent.com/elixir-lsp/vscode-elixir-ls/72c89d1cc38e9e4a4c54d6715e4372338df976e7/elixir-language-configuration.json",
+        "filename": "elixir.language-configuration.json"
+      }
+    ],
+    "licenses": [
+      {
+        "source": "https://raw.githubusercontent.com/elixir-lsp/vscode-elixir-ls/72c89d1cc38e9e4a4c54d6715e4372338df976e7/LICENSE",
+        "filename": "LICENSE.txt"
+      }
+    ]
+  },
+  {
+    "id": "haskell",
+    "scope": "source.haskell",
+    "sample": "sample.hs",
+    "extension": "haskell.language-haskell",
+    "repository": "https://github.com/JustusAdam/language-haskell",
+    "grammars": [
+      {
+        "scopeName": "source.haskell",
+        "url": "https://raw.githubusercontent.com/JustusAdam/language-haskell/28d1986362cba0d9d37209c5ab15cd89920201b6/syntaxes/haskell.YAML-tmLanguage",
+        "format": "yaml",
+        "injectTo": [],
+        "contribution": {
+          "language": "haskell",
+          "scopeName": "source.haskell"
+        }
+      }
+    ],
+    "languages": [
+      {
+        "id": "haskell",
+        "aliases": [
+          "Haskell",
+          "haskell"
+        ],
+        "extensions": [
+          ".hs",
+          ".hsig",
+          ".hs-boot"
+        ],
+        "configuration": "./syntaxes/frameworks/haskell/haskell.language-configuration.json"
+      }
+    ],
+    "configurations": [
+      {
+        "source": "https://raw.githubusercontent.com/JustusAdam/language-haskell/28d1986362cba0d9d37209c5ab15cd89920201b6/haskell-configuration.json",
+        "filename": "haskell.language-configuration.json"
+      }
+    ],
+    "licenses": [
+      {
+        "source": "https://raw.githubusercontent.com/JustusAdam/language-haskell/28d1986362cba0d9d37209c5ab15cd89920201b6/LICENSE",
+        "filename": "LICENSE.txt"
+      }
+    ]
+  },
+  {
+    "id": "lisp",
+    "scope": "source.lisp",
+    "sample": "sample.lisp",
+    "extension": "mattn.Lisp",
+    "repository": "https://github.com/mattn/vscode-lisp",
+    "grammars": [
+      {
+        "scopeName": "source.lisp",
+        "url": "https://raw.githubusercontent.com/mattn/vscode-lisp/09f9077526364501763414f8dd3a6aeff9e69f0e/syntaxes/Lisp.tmLanguage",
+        "format": "textmate",
+        "injectTo": [],
+        "contribution": {
+          "language": "lisp",
+          "scopeName": "source.lisp"
+        }
+      }
+    ],
+    "languages": [
+      {
+        "id": "lisp",
+        "aliases": [
+          "Lisp",
+          "lisp"
+        ],
+        "extensions": [
+          ".lisp",
+          ".cl",
+          ".asd",
+          ".lsp"
+        ],
+        "configuration": "./syntaxes/frameworks/lisp/lisp.language-configuration.json"
+      }
+    ],
+    "configurations": [
+      {
+        "source": "https://raw.githubusercontent.com/mattn/vscode-lisp/09f9077526364501763414f8dd3a6aeff9e69f0e/Lisp.configuration.json",
+        "filename": "lisp.language-configuration.json"
+      }
+    ],
+    "licenses": [
+      {
+        "source": "https://raw.githubusercontent.com/mattn/vscode-lisp/09f9077526364501763414f8dd3a6aeff9e69f0e/LICENSE",
+        "filename": "LICENSE.txt"
+      }
+    ]
+  },
+  {
+    "id": "templ",
+    "scope": "source.templ",
+    "sample": "sample.templ",
+    "extension": "a-h.templ",
+    "repository": "https://github.com/templ-go/templ-vscode",
+    "grammars": [
+      {
+        "scopeName": "source.templ",
+        "url": "https://raw.githubusercontent.com/templ-go/templ-vscode/f94c5e42d84b049c897afdda28c0f3f29bf5596c/syntaxes/templ.tmLanguage.json",
+        "format": "textmate",
+        "injectTo": [],
+        "contribution": {
+          "language": "templ",
+          "scopeName": "source.templ",
+          "embeddedLanguages": {
+            "meta.embedded.block.go": "go",
+            "meta.embedded.block.js": "javascript",
+            "meta.embedded.block.html": "html",
+            "meta.embedded.block.css": "css"
+          }
+        }
+      }
+    ],
+    "languages": [
+      {
+        "id": "templ",
+        "aliases": [
+          "templ",
+          "templ"
+        ],
+        "extensions": [
+          ".templ"
+        ],
+        "configuration": "./syntaxes/frameworks/templ/templ.language-configuration.json"
+      }
+    ],
+    "configurations": [
+      {
+        "source": "https://raw.githubusercontent.com/templ-go/templ-vscode/f94c5e42d84b049c897afdda28c0f3f29bf5596c/language-configuration.json",
+        "filename": "templ.language-configuration.json"
+      }
+    ],
+    "licenses": [
+      {
+        "source": "https://raw.githubusercontent.com/templ-go/templ-vscode/f94c5e42d84b049c897afdda28c0f3f29bf5596c/LICENSE",
+        "filename": "LICENSE.txt"
+      }
+    ]
+  },
+  {
+    "id": "zig",
+    "scope": "source.zig",
+    "sample": "sample.zig",
+    "extension": "ziglang.vscode-zig",
+    "repository": "https://codeberg.org/ziglang/vscode-zig",
+    "grammars": [
+      {
+        "scopeName": "source.zig",
+        "url": "https://codeberg.org/ziglang/vscode-zig/raw/commit/fa8e2c7dc44cb8e3f6cf97a4273b6ca1e202c02c/syntaxes/zig.tmLanguage.json",
+        "format": "textmate",
+        "injectTo": [],
+        "contribution": {
+          "language": "zig",
+          "scopeName": "source.zig"
+        },
+        "patches": [
+          {
+            "find": {
+              "name": "keyword.default.zig",
+              "match": "\\b(test|and|or)\\b"
+            },
+            "replace": {
+              "match": "\\b(?:(test)|(and|or))\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.default.zig"
+                },
+                "2": {
+                  "name": "keyword.operator.logical.zig"
+                }
+              }
+            },
+            "reason": "Keep test scaffolding muted while logical and/or operators use regular text."
+          },
+          {
+            "find": {
+              "name": "support.function.builtin.zig",
+              "match": "@[_a-zA-Z][_a-zA-Z0-9]*"
+            },
+            "replace": {
+              "match": "(@import\\b)|(@[_a-zA-Z][_a-zA-Z0-9]*)",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.import.zig"
+                }
+              }
+            },
+            "reason": "Mute @import like other imports while keeping ordinary builtin function names regular."
+          }
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "id": "zig",
+        "extensions": [
+          ".zig",
+          ".zon"
+        ],
+        "aliases": [
+          "Zig"
+        ],
+        "configuration": "./syntaxes/frameworks/zig/zig.language-configuration.json"
+      }
+    ],
+    "configurations": [
+      {
+        "source": "https://codeberg.org/ziglang/vscode-zig/raw/commit/fa8e2c7dc44cb8e3f6cf97a4273b6ca1e202c02c/language-configuration.json",
+        "filename": "zig.language-configuration.json"
+      }
+    ],
+    "licenses": [
+      {
+        "source": "https://codeberg.org/ziglang/vscode-zig/raw/commit/fa8e2c7dc44cb8e3f6cf97a4273b6ca1e202c02c/LICENSE",
+        "filename": "LICENSE.txt"
+      }
+    ]
+  },
+  {
+    "id": "nix",
+    "scope": "source.nix",
+    "sample": "sample.nix",
+    "extension": "jnoortheen.nix-ide",
+    "repository": "https://github.com/nix-community/vscode-nix-ide",
+    "grammars": [
+      {
+        "scopeName": "source.nix",
+        "url": "https://raw.githubusercontent.com/nix-community/vscode-nix-ide/065fcba88075f682cdd4db7738f13d2c9e2d5c6a/dist/nix.tmLanguage.json",
+        "format": "textmate",
+        "injectTo": [],
+        "contribution": {
+          "language": "nix",
+          "scopeName": "source.nix"
+        },
+        "patches": [
+          {
+            "find": {
+              "begin": "\\bif\\b",
+              "end": "\\bth(?=en\\b)"
+            },
+            "replace": {
+              "beginCaptures": {
+                "0": {
+                  "name": "keyword.control.conditional.nix"
+                }
+              },
+              "endCaptures": {
+                "0": {
+                  "name": "keyword.control.conditional.nix"
+                }
+              }
+            },
+            "reason": "Classify the existing conditional keyword captures as control flow, including inside interpolated expressions."
+          },
+          {
+            "find": {
+              "begin": "(?<=th)en\\b",
+              "end": "\\bel(?=se\\b)"
+            },
+            "replace": {
+              "beginCaptures": {
+                "0": {
+                  "name": "keyword.control.conditional.nix"
+                }
+              },
+              "endCaptures": {
+                "0": {
+                  "name": "keyword.control.conditional.nix"
+                }
+              }
+            },
+            "reason": "Classify the existing conditional keyword captures as control flow, including inside interpolated expressions."
+          },
+          {
+            "find": {
+              "begin": "(?<=el)se\\b",
+              "end": "(?=([\\])};,]|\\b(else|then)\\b))"
+            },
+            "replace": {
+              "beginCaptures": {
+                "0": {
+                  "name": "keyword.control.conditional.nix"
+                }
+              },
+              "endCaptures": {
+                "0": {
+                  "name": "keyword.control.conditional.nix"
+                }
+              }
+            },
+            "reason": "Classify the existing conditional keyword captures as control flow, including inside interpolated expressions."
+          },
+          {
+            "find": {
+              "begin": "(?<![\\w'-])(with|assert)(?![\\w'-])"
+            },
+            "replace": {
+              "begin": "(?<![\\w'-])(?:(with)|(assert))(?![\\w'-])",
+              "beginCaptures": {
+                "1": {
+                  "name": "keyword.other.nix"
+                },
+                "2": {
+                  "name": "keyword.control.assert.nix"
+                }
+              }
+            },
+            "reason": "Distinguish assertion control flow from with scaffolding."
+          },
+          {
+            "find": {
+              "name": "keyword.operator.nix",
+              "match": "(\\bor\\b|\\.|\\|\\>|\\<\\||==|!=|!|\\<\\=|\\<|\\>\\=|\\>|&&|\\|\\||-\\>|//|\\?|\\+\\+|-|\\*|/(?=([^*]|$))|\\+)"
+            },
+            "replace": {
+              "match": "(\\.)|(\\bor\\b|\\|\\>|\\<\\||==|!=|!|\\<\\=|\\<|\\>\\=|\\>|&&|\\|\\||-\\>|//|\\?|\\+\\+|-|\\*|/(?=([^*]|$))|\\+)",
+              "captures": {
+                "1": {
+                  "name": "punctuation.accessor.nix"
+                },
+                "2": {
+                  "name": "keyword.operator.computation.nix"
+                }
+              }
+            },
+            "reason": "Separate the dot accessor from computing operators without changing rule order; paths and comments retain priority."
+          }
+        ]
+      },
+      {
+        "scopeName": "markdown.nix.codeblock",
+        "url": "https://raw.githubusercontent.com/nix-community/vscode-nix-ide/065fcba88075f682cdd4db7738f13d2c9e2d5c6a/dist/injection.json",
+        "format": "textmate",
+        "injectTo": [
+          "text.html.markdown"
+        ],
+        "contribution": {
+          "scopeName": "markdown.nix.codeblock",
+          "injectTo": [
+            "text.html.markdown"
+          ],
+          "embeddedLanguages": {
+            "meta.embedded.block.nix": "nix"
+          }
+        }
+      }
+    ],
+    "languages": [
+      {
+        "id": "nix",
+        "aliases": [
+          "Nix",
+          "nix"
+        ],
+        "extensions": [
+          ".nix"
+        ],
+        "configuration": "./syntaxes/frameworks/nix/nix.language-configuration.json"
+      }
+    ],
+    "configurations": [
+      {
+        "source": "https://raw.githubusercontent.com/nix-community/vscode-nix-ide/065fcba88075f682cdd4db7738f13d2c9e2d5c6a/language-configuration.json",
+        "filename": "nix.language-configuration.json"
+      }
+    ],
+    "licenses": [
+      {
+        "source": "https://raw.githubusercontent.com/nix-community/vscode-nix-ide/065fcba88075f682cdd4db7738f13d2c9e2d5c6a/LICENSE",
+        "filename": "LICENSE.txt"
+      }
+    ]
+  }
+]

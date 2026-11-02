@@ -1,0 +1,8 @@
+{
+  // Preview snippet definition.
+  "Project label": {
+    "prefix": "project",
+    "body": ["Project: ${1:name}"],
+    "description": "eenei"
+  }
+}

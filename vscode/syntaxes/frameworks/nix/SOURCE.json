@@ -1,0 +1,155 @@
+{
+  "id": "nix",
+  "scope": "source.nix",
+  "sample": "sample.nix",
+  "extension": "jnoortheen.nix-ide",
+  "repository": "https://github.com/nix-community/vscode-nix-ide",
+  "grammars": [
+    {
+      "scopeName": "source.nix",
+      "url": "https://raw.githubusercontent.com/nix-community/vscode-nix-ide/065fcba88075f682cdd4db7738f13d2c9e2d5c6a/dist/nix.tmLanguage.json",
+      "format": "textmate",
+      "injectTo": [],
+      "contribution": {
+        "language": "nix",
+        "scopeName": "source.nix"
+      },
+      "patches": [
+        {
+          "find": {
+            "begin": "\\bif\\b",
+            "end": "\\bth(?=en\\b)"
+          },
+          "replace": {
+            "beginCaptures": {
+              "0": {
+                "name": "keyword.control.conditional.nix"
+              }
+            },
+            "endCaptures": {
+              "0": {
+                "name": "keyword.control.conditional.nix"
+              }
+            }
+          },
+          "reason": "Classify the existing conditional keyword captures as control flow, including inside interpolated expressions."
+        },
+        {
+          "find": {
+            "begin": "(?<=th)en\\b",
+            "end": "\\bel(?=se\\b)"
+          },
+          "replace": {
+            "beginCaptures": {
+              "0": {
+                "name": "keyword.control.conditional.nix"
+              }
+            },
+            "endCaptures": {
+              "0": {
+                "name": "keyword.control.conditional.nix"
+              }
+            }
+          },
+          "reason": "Classify the existing conditional keyword captures as control flow, including inside interpolated expressions."
+        },
+        {
+          "find": {
+            "begin": "(?<=el)se\\b",
+            "end": "(?=([\\])};,]|\\b(else|then)\\b))"
+          },
+          "replace": {
+            "beginCaptures": {
+              "0": {
+                "name": "keyword.control.conditional.nix"
+              }
+            },
+            "endCaptures": {
+              "0": {
+                "name": "keyword.control.conditional.nix"
+              }
+            }
+          },
+          "reason": "Classify the existing conditional keyword captures as control flow, including inside interpolated expressions."
+        },
+        {
+          "find": {
+            "begin": "(?<![\\w'-])(with|assert)(?![\\w'-])"
+          },
+          "replace": {
+            "begin": "(?<![\\w'-])(?:(with)|(assert))(?![\\w'-])",
+            "beginCaptures": {
+              "1": {
+                "name": "keyword.other.nix"
+              },
+              "2": {
+                "name": "keyword.control.assert.nix"
+              }
+            }
+          },
+          "reason": "Distinguish assertion control flow from with scaffolding."
+        },
+        {
+          "find": {
+            "name": "keyword.operator.nix",
+            "match": "(\\bor\\b|\\.|\\|\\>|\\<\\||==|!=|!|\\<\\=|\\<|\\>\\=|\\>|&&|\\|\\||-\\>|//|\\?|\\+\\+|-|\\*|/(?=([^*]|$))|\\+)"
+          },
+          "replace": {
+            "match": "(\\.)|(\\bor\\b|\\|\\>|\\<\\||==|!=|!|\\<\\=|\\<|\\>\\=|\\>|&&|\\|\\||-\\>|//|\\?|\\+\\+|-|\\*|/(?=([^*]|$))|\\+)",
+            "captures": {
+              "1": {
+                "name": "punctuation.accessor.nix"
+              },
+              "2": {
+                "name": "keyword.operator.computation.nix"
+              }
+            }
+          },
+          "reason": "Separate the dot accessor from computing operators without changing rule order; paths and comments retain priority."
+        }
+      ]
+    },
+    {
+      "scopeName": "markdown.nix.codeblock",
+      "url": "https://raw.githubusercontent.com/nix-community/vscode-nix-ide/065fcba88075f682cdd4db7738f13d2c9e2d5c6a/dist/injection.json",
+      "format": "textmate",
+      "injectTo": [
+        "text.html.markdown"
+      ],
+      "contribution": {
+        "scopeName": "markdown.nix.codeblock",
+        "injectTo": [
+          "text.html.markdown"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.nix": "nix"
+        }
+      }
+    }
+  ],
+  "languages": [
+    {
+      "id": "nix",
+      "aliases": [
+        "Nix",
+        "nix"
+      ],
+      "extensions": [
+        ".nix"
+      ],
+      "configuration": "./syntaxes/frameworks/nix/nix.language-configuration.json"
+    }
+  ],
+  "configurations": [
+    {
+      "source": "https://raw.githubusercontent.com/nix-community/vscode-nix-ide/065fcba88075f682cdd4db7738f13d2c9e2d5c6a/language-configuration.json",
+      "filename": "nix.language-configuration.json"
+    }
+  ],
+  "licenses": [
+    {
+      "source": "https://raw.githubusercontent.com/nix-community/vscode-nix-ide/065fcba88075f682cdd4db7738f13d2c9e2d5c6a/LICENSE",
+      "filename": "LICENSE.txt"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# Keep the development image small.
+.git
+node_modules
+*.log
+.env*
+!.env.example

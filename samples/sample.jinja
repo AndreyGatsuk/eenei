@@ -1,0 +1,6 @@
+{# Preview active projects. #}
+{% for project in projects %}
+{% if project.active %}
+{{ "Project: " ~ project.name }}
+{% endif %}
+{% endfor %}

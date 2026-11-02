@@ -1,0 +1,62 @@
+{
+  "scopeName": "theme-lab.injection.python",
+  "injectionSelector": "L:source.python -comment -string -meta.function.decorator -meta.toplevel",
+  "patterns": [
+    {
+      "name": "meta.toplevel.python",
+      "begin": "^(?=(?:async\\s+)?def\\b)",
+      "end": "$",
+      "patterns": [{ "include": "#rules" }, { "include": "source.python" }]
+    },
+    { "include": "#rules" }
+  ],
+  "repository": {
+    "rules": {
+      "patterns": [
+        {
+          "match": "^\\s*(from)\\s+([\\w.]+)\\s+(import)\\b",
+          "captures": {
+            "1": { "name": "keyword.control.import.python" },
+            "2": { "name": "entity.name.namespace.python" },
+            "3": { "name": "keyword.control.import.python" }
+          }
+        },
+        {
+          "begin": "\\b(?<!\\.)(for)\\b",
+          "beginCaptures": {
+            "1": { "name": "keyword.control.flow.python" }
+          },
+          "end": "\\b(in)\\b",
+          "endCaptures": {
+            "1": { "name": "keyword.other.in.python" }
+          },
+          "patterns": [{ "include": "source.python" }]
+        },
+        {
+          "match": "\\b(yield)\\s+(from)\\b",
+          "captures": {
+            "1": { "name": "keyword.control.flow.python" },
+            "2": { "name": "keyword.other.python" }
+          }
+        },
+        {
+          "match": "^\\s*(class)\\s+(\\w+)(?=\\s*\\[)",
+          "captures": {
+            "1": { "name": "storage.type.class.python" },
+            "2": { "name": "entity.name.type.class.python" }
+          }
+        },
+        {
+          "match": "^\\s*(type)\\s+(?=\\w+\\s*[\\[=])",
+          "captures": {
+            "1": { "name": "storage.type.type.python" }
+          }
+        },
+        {
+          "name": "keyword.other.python",
+          "match": "\\b(?<!\\.)(as|async|del|from|pass|with)\\b"
+        }
+      ]
+    }
+  }
+}

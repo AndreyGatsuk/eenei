@@ -1,0 +1,32 @@
+{
+  "name": "eenei",
+  "private": true,
+  "description": "eenei theme sources and development tools",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node scripts/dev.js",
+    "watch": "npm run dev",
+    "check": "npm run prepare:grammars && npm run build && npm run check:samples && node --test tests/*.test.js",
+    "render": "npm run prepare:grammars && node scripts/render.js",
+    "screenshots": "npm run prepare:grammars && npm run build && node scripts/screenshots.js",
+    "package": "node scripts/package.js",
+    "vendor:grammars": "node scripts/vendor-grammars.js",
+    "check:samples": "tsc --project samples/tsconfig.json",
+    "check:editor": "npm run build && node scripts/check-editor.js",
+    "report": "node scripts/report.js",
+    "catalog:update": "node scripts/coverage/update-language-catalogs.js",
+    "prepare:grammars": "node scripts/prepare-grammars.js"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.7.1",
+    "vscode-oniguruma": "^2.0.1",
+    "vscode-textmate": "^9.3.0",
+    "js-yaml": "^4.3.2",
+    "react": "^19.3.1",
+    "@types/react": "^19.3.0",
+    "typescript": "^5.9.3"
+  }
+}

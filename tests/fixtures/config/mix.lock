@@ -1,0 +1,2 @@
+# Lockfile syntax fixture with synthetic package data.
+%{"theme_lab" => {:hex, :theme_lab, "0.1.0", "checksum", [:mix], [], "hexpm", "checksum"}}

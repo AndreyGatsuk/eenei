@@ -1,0 +1,14 @@
+{
+  "id": "on-lilac",
+  "name": "on Lilac",
+  "dark": {
+    "string": "#b59bd8",
+    "comment": "#aaa292",
+    "docComment": "#867e73"
+  },
+  "light": {
+    "string": "#7952a3",
+    "comment": "#6e6451",
+    "docComment": "#736b60"
+  }
+}

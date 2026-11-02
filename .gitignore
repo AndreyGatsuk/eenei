@@ -1,0 +1,12 @@
+screenshots/
+samples/target/
+*.vsix
+node_modules/
+vscode/README.md
+vscode/LICENSE
+vscode/assets/
+reports/
+dist/
+vscode/docs/
+vscode/DESIGN.md
+.cache/

@@ -1,0 +1,159 @@
+{
+  "repository": "https://github.com/pustota-theme/pustota",
+  "revision": "c6947bb53496f4c543c9d461a6da3d62269180b4",
+  "directory": "test",
+  "files": [
+    {
+      "upstream": "BASH.sh",
+      "sample": "sample.sh"
+    },
+    {
+      "upstream": "Batch.bat",
+      "sample": "sample.bat"
+    },
+    {
+      "upstream": "C.c",
+      "sample": "sample.c"
+    },
+    {
+      "upstream": "Clojure.clj",
+      "sample": "sample.clj"
+    },
+    {
+      "upstream": "Csharp.cs",
+      "sample": "sample.cs"
+    },
+    {
+      "upstream": "Css.css",
+      "sample": "sample.css"
+    },
+    {
+      "upstream": "Dart.dart",
+      "sample": "sample.dart"
+    },
+    {
+      "upstream": "Diff.diff",
+      "sample": "sample.diff"
+    },
+    {
+      "upstream": "Dockerfile",
+      "sample": "Dockerfile"
+    },
+    {
+      "upstream": "Elixir.ex",
+      "sample": "sample.ex"
+    },
+    {
+      "upstream": "Golang.go",
+      "sample": "sample.go"
+    },
+    {
+      "upstream": "Golang.templ",
+      "sample": "sample.templ"
+    },
+    {
+      "upstream": "HTML.html",
+      "sample": "sample.html"
+    },
+    {
+      "upstream": "Haskell.hs",
+      "sample": "sample.hs"
+    },
+    {
+      "upstream": "INI.ini",
+      "sample": "sample.ini"
+    },
+    {
+      "upstream": "JSON.json",
+      "sample": "sample.json"
+    },
+    {
+      "upstream": "JSX.jsx",
+      "sample": "sample.jsx"
+    },
+    {
+      "upstream": "Java.java",
+      "sample": "Project.java"
+    },
+    {
+      "upstream": "JavaScript.js",
+      "sample": "sample.js"
+    },
+    {
+      "upstream": "Lisp.lisp",
+      "sample": "sample.lisp"
+    },
+    {
+      "upstream": "Lua.lua",
+      "sample": "sample.lua"
+    },
+    {
+      "upstream": "Makefile",
+      "sample": "Makefile"
+    },
+    {
+      "upstream": "Markdown.md",
+      "sample": "sample.md"
+    },
+    {
+      "upstream": "Objective-C.m",
+      "sample": "sample.m"
+    },
+    {
+      "upstream": "PHP.php",
+      "sample": "sample.php"
+    },
+    {
+      "upstream": "PowerShell.ps1",
+      "sample": "sample.ps1"
+    },
+    {
+      "upstream": "Python.py",
+      "sample": "sample.py"
+    },
+    {
+      "upstream": "RST.rst",
+      "sample": "sample.rst"
+    },
+    {
+      "upstream": "Ruby.rb",
+      "sample": "sample.rb"
+    },
+    {
+      "upstream": "Rust.rs",
+      "sample": "sample.rs"
+    },
+    {
+      "upstream": "SCSS.scss",
+      "sample": "sample.scss"
+    },
+    {
+      "upstream": "SQL.sql",
+      "sample": "sample.sql"
+    },
+    {
+      "upstream": "TOML.toml",
+      "sample": "Cargo.toml"
+    },
+    {
+      "upstream": "TSX.tsx",
+      "sample": "sample.tsx"
+    },
+    {
+      "upstream": "TypeScript.ts",
+      "sample": "sample.ts"
+    },
+    {
+      "upstream": "Vue.vue",
+      "sample": "sample.vue"
+    },
+    {
+      "upstream": "XML.xml",
+      "sample": "sample.xml"
+    },
+    {
+      "upstream": "YAML.yaml",
+      "sample": "compose.yaml"
+    }
+  ]
+}

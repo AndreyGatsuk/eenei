@@ -1,0 +1,26 @@
+# Local development services
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    environment:
+      "APP_ENV": development
+      'LOG_LEVEL': "info"
+    depends_on: [db]
+    restart: unless-stopped
+    read_only: true
+    deploy:
+      replicas: 2
+    labels: {app: "navigate", tier: frontend}
+    command: |
+      nginx -g 'daemon off;'
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_PASSWORD: "${DB_PASSWORD:-local}"
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data: {}

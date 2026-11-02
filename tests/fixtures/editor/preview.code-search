@@ -1,0 +1,6 @@
+# Query: eenei
+# Flags: RegExp
+# ContextLines: 1
+
+preview.py:
+  2: print("eenei")

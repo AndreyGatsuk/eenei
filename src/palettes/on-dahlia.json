@@ -1,0 +1,14 @@
+{
+  "id": "on-dahlia",
+  "name": "on Dahlia",
+  "dark": {
+    "string": "#d8a58b",
+    "comment": "#99aaa8",
+    "docComment": "#768987"
+  },
+  "light": {
+    "string": "#935939",
+    "comment": "#546967",
+    "docComment": "#5c706e"
+  }
+}

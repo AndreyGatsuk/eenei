@@ -1,0 +1,46 @@
+{
+  "id": "graphql",
+  "scope": "source.graphql",
+  "sample": "sample.graphql",
+  "extension": "GraphQL.vscode-graphql",
+  "repository": "https://github.com/graphql/vscode-graphql",
+  "grammars": [
+    {
+      "scopeName": "source.graphql",
+      "url": "https://raw.githubusercontent.com/graphql/vscode-graphql/66e9d69b76c237714db0e606fa7ac32fc4fa3a94/grammars/graphql.json",
+      "format": "textmate",
+      "injectTo": [],
+      "contribution": {
+        "language": "graphql",
+        "scopeName": "source.graphql"
+      }
+    }
+  ],
+  "languages": [
+    {
+      "id": "graphql",
+      "extensions": [
+        ".gql",
+        ".graphql",
+        ".graphqls"
+      ],
+      "aliases": [
+        "GraphQL",
+        "graphql"
+      ],
+      "configuration": "./syntaxes/frameworks/graphql/graphql.language-configuration.json"
+    }
+  ],
+  "configurations": [
+    {
+      "source": "https://raw.githubusercontent.com/graphql/vscode-graphql/66e9d69b76c237714db0e606fa7ac32fc4fa3a94/language/language-configuration.json",
+      "filename": "graphql.language-configuration.json"
+    }
+  ],
+  "licenses": [
+    {
+      "source": "https://raw.githubusercontent.com/graphql/vscode-graphql/66e9d69b76c237714db0e606fa7ac32fc4fa3a94/LICENSE",
+      "filename": "LICENSE.txt"
+    }
+  ]
+}

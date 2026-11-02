@@ -1,0 +1,7 @@
+# Preview the schema.
+"Project preview."
+type Project {
+  id: ID!
+  name: String!
+}
+type Query { projects: [Project!]! }

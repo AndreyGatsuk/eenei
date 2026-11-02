@@ -1,0 +1,14 @@
+{
+  "id": "on-rose",
+  "name": "on Rose",
+  "dark": {
+    "string": "#cc9db8",
+    "comment": "#a6a294",
+    "docComment": "#847e77"
+  },
+  "light": {
+    "string": "#925471",
+    "comment": "#686354",
+    "docComment": "#70695f"
+  }
+}

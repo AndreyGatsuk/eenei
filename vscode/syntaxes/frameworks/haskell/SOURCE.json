@@ -1,0 +1,46 @@
+{
+  "id": "haskell",
+  "scope": "source.haskell",
+  "sample": "sample.hs",
+  "extension": "haskell.language-haskell",
+  "repository": "https://github.com/JustusAdam/language-haskell",
+  "grammars": [
+    {
+      "scopeName": "source.haskell",
+      "url": "https://raw.githubusercontent.com/JustusAdam/language-haskell/28d1986362cba0d9d37209c5ab15cd89920201b6/syntaxes/haskell.YAML-tmLanguage",
+      "format": "yaml",
+      "injectTo": [],
+      "contribution": {
+        "language": "haskell",
+        "scopeName": "source.haskell"
+      }
+    }
+  ],
+  "languages": [
+    {
+      "id": "haskell",
+      "aliases": [
+        "Haskell",
+        "haskell"
+      ],
+      "extensions": [
+        ".hs",
+        ".hsig",
+        ".hs-boot"
+      ],
+      "configuration": "./syntaxes/frameworks/haskell/haskell.language-configuration.json"
+    }
+  ],
+  "configurations": [
+    {
+      "source": "https://raw.githubusercontent.com/JustusAdam/language-haskell/28d1986362cba0d9d37209c5ab15cd89920201b6/haskell-configuration.json",
+      "filename": "haskell.language-configuration.json"
+    }
+  ],
+  "licenses": [
+    {
+      "source": "https://raw.githubusercontent.com/JustusAdam/language-haskell/28d1986362cba0d9d37209c5ab15cd89920201b6/LICENSE",
+      "filename": "LICENSE.txt"
+    }
+  ]
+}

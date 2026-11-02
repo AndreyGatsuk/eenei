@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Eenei: watch",
+      "type": "shell",
+      "command": "npm run watch",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "theme-lab",
+        "pattern": {
+          "regexp": "^(.+):(\\d+): (.+)$",
+          "file": 1,
+          "line": 2,
+          "message": 3
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^Building themes$",
+          "endsPattern": "^Build complete: [0-9]+ themes$"
+        }
+      },
+      "presentation": {
+        "reveal": "silent"
+      }
+    }
+  ]
+}

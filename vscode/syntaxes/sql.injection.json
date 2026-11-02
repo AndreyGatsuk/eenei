@@ -1,0 +1,26 @@
+{
+  "scopeName": "theme-lab.injection.sql",
+  "injectionSelector": "L:source.sql -comment -string -text.bracketed",
+  "patterns": [
+    {
+      "name": "keyword.control.query.sql",
+      "match": "(?i:(?<![\\w$@:.])(?:(?:(?:NATURAL\\s+)?(?:(?:LEFT|RIGHT|FULL)(?:\\s+OUTER)?|INNER|CROSS)\\s+JOIN|NATURAL\\s+JOIN)|SELECT|FROM|WHERE|JOIN|ON|GROUP|BY|HAVING|ORDER|LIMIT|OFFSET|WITH|UNION|INTERSECT|EXCEPT|INSERT|INTO|VALUES|UPDATE|SET|DELETE|RETURNING)(?![\\w$]))"
+    },
+    {
+      "name": "keyword.control.conditional.sql",
+      "match": "(?i:(?<![\\w$@:.])(?:CASE|WHEN|THEN|ELSE|END)(?![\\w$]))"
+    },
+    {
+      "name": "keyword.operator.logical.sql",
+      "match": "(?i:(?<![\\w$@:.])(?:AND|OR|NOT|IS|IN|LIKE|ILIKE|BETWEEN|EXISTS)(?![\\w$]))"
+    },
+    {
+      "name": "constant.language.sql",
+      "match": "(?i:(?<![\\w$@:.])(?:NULL|TRUE|FALSE)(?![\\w$]))"
+    },
+    {
+      "name": "keyword.operator.math.sql",
+      "match": "\\*|\\|\\|"
+    }
+  ]
+}

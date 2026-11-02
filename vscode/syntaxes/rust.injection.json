@@ -1,0 +1,98 @@
+{
+  "scopeName": "theme-lab.injection.rust",
+  "injectionSelector": "L:source.rust -comment -string -meta.attribute -meta.toplevel",
+  "patterns": [
+    {
+      "name": "meta.toplevel.rust",
+      "begin": "^(?=(?:pub(?:\\([^)]*\\))?\\s+)?(?:(?:async|const|unsafe|extern\\s+\"[^\"]*\")\\s+)*fn\\b)",
+      "end": "(?<=\\{|;)",
+      "patterns": [
+        {
+          "include": "#rules"
+        },
+        {
+          "include": "source.rust"
+        }
+      ]
+    },
+    {
+      "include": "#rules"
+    }
+  ],
+  "repository": {
+    "rules": {
+      "patterns": [
+        {
+          "name": "meta.macro.rules.rust",
+          "match": "\\b(macro_rules!)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*(\\{)",
+          "captures": {
+            "1": {
+              "name": "entity.name.function.macro.rules.rust"
+            },
+            "2": {
+              "name": "entity.name.function.macro.rust"
+            },
+            "3": {
+              "name": "punctuation.brackets.curly.rust"
+            }
+          }
+        },
+        {
+          "name": "meta.impl.rust",
+          "begin": "^\\s*(?:(unsafe)\\s+)?(impl)\\b",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.other.unsafe.rust"
+            },
+            "2": {
+              "name": "keyword.other.rust"
+            }
+          },
+          "end": "(?=\\{|;|\\bwhere\\b)",
+          "patterns": [
+            {
+              "include": "#generic"
+            },
+            {
+              "include": "source.rust"
+            }
+          ]
+        },
+        {
+          "name": "entity.name.namespace.rust",
+          "match": "\\bself(?=::)"
+        },
+        {
+          "name": "keyword.other.unsafe.rust",
+          "match": "\\bunsafe\\b"
+        }
+      ]
+    },
+    "generic": {
+      "contentName": "meta.generic.rust",
+      "begin": "(_?[A-Z][A-Za-z0-9_]*)?(<)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.type.rust"
+        },
+        "2": {
+          "name": "punctuation.brackets.angle.rust"
+        }
+      },
+      "end": ">",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.brackets.angle.rust"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#generic"
+        },
+        {
+          "include": "source.rust"
+        }
+      ]
+    }
+  }
+}

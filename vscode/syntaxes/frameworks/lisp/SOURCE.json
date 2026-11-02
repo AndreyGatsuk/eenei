@@ -1,0 +1,47 @@
+{
+  "id": "lisp",
+  "scope": "source.lisp",
+  "sample": "sample.lisp",
+  "extension": "mattn.Lisp",
+  "repository": "https://github.com/mattn/vscode-lisp",
+  "grammars": [
+    {
+      "scopeName": "source.lisp",
+      "url": "https://raw.githubusercontent.com/mattn/vscode-lisp/09f9077526364501763414f8dd3a6aeff9e69f0e/syntaxes/Lisp.tmLanguage",
+      "format": "textmate",
+      "injectTo": [],
+      "contribution": {
+        "language": "lisp",
+        "scopeName": "source.lisp"
+      }
+    }
+  ],
+  "languages": [
+    {
+      "id": "lisp",
+      "aliases": [
+        "Lisp",
+        "lisp"
+      ],
+      "extensions": [
+        ".lisp",
+        ".cl",
+        ".asd",
+        ".lsp"
+      ],
+      "configuration": "./syntaxes/frameworks/lisp/lisp.language-configuration.json"
+    }
+  ],
+  "configurations": [
+    {
+      "source": "https://raw.githubusercontent.com/mattn/vscode-lisp/09f9077526364501763414f8dd3a6aeff9e69f0e/Lisp.configuration.json",
+      "filename": "lisp.language-configuration.json"
+    }
+  ],
+  "licenses": [
+    {
+      "source": "https://raw.githubusercontent.com/mattn/vscode-lisp/09f9077526364501763414f8dd3a6aeff9e69f0e/LICENSE",
+      "filename": "LICENSE.txt"
+    }
+  ]
+}

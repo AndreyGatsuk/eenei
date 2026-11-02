@@ -1,0 +1,31 @@
+{
+  "scopeName": "theme-lab.injection.bibtex",
+  "injectionSelector": "L:text.bibtex meta.key-assignment.bibtex -comment -string",
+  "patterns": [
+    {
+      "name": "string.quoted.double.bibtex",
+      "begin": "\"",
+      "end": "(?<!\\\\)\"",
+      "patterns": [
+        {
+          "include": "#braces"
+        }
+      ]
+    },
+    {
+      "include": "#braces"
+    }
+  ],
+  "repository": {
+    "braces": {
+      "name": "string.quoted.other.bibtex",
+      "begin": "\\{",
+      "end": "\\}",
+      "patterns": [
+        {
+          "include": "#braces"
+        }
+      ]
+    }
+  }
+}

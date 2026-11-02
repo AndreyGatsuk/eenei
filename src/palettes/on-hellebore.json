@@ -1,0 +1,14 @@
+{
+  "id": "on-hellebore",
+  "name": "on Hellebore",
+  "dark": {
+    "string": "#a8c79b",
+    "comment": "#ad9da9",
+    "docComment": "#887c85"
+  },
+  "light": {
+    "string": "#486c3c",
+    "comment": "#75616e",
+    "docComment": "#786a74"
+  }
+}
