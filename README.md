@@ -19,6 +19,7 @@ palette. Names and values stay quiet; highlighting works as soon as you select a
 2. Open **Preferences: Color Theme** (`Ctrl+K Ctrl+T` / `⌘K ⌘T`).
 3. Choose **Eenei on Rose**, **Dahlia**, **Lilac** or **Hellebore**, in Dark or Light.
 
+Download `eenei.vsix` from [GitHub Releases](https://github.com/AndreyGatsuk/eenei/releases).
 For a local build, run `npm ci && npm run package`; the file is `dist/eenei.vsix`.
 
 ## Palettes

@@ -83,16 +83,65 @@ shows one comparison sample per theme.
 The extension ID is `AndreyGatsuk.eenei`, published by `AndreyGatsuk`. Sources live
 at `https://github.com/AndreyGatsuk/eenei`. Eenei is separate from Navigate.
 
-For a release, bump `version` in `vscode/package.json`, merge, and
-push `v<version>` on `main`. The release workflow publishes `dist/eenei.vsix` to
-the Marketplace with OIDC and Open VSX with trusted publishing.
+The release is deliberate: merging a commit or a Dependabot PR does not publish
+anything. The version in `vscode/package.json` is the source of truth.
 
-Before the first release, create the `AndreyGatsuk` publisher in Visual Studio
-Marketplace and the corresponding namespace in Open VSX. Configure trusted
-publishing in both registries for GitHub owner `AndreyGatsuk`, repository `eenei`,
-and workflow `publish.yml` (no environment is configured). Make the repository
-public before publishing so README images and guide links are accessible.
-A private repository can run checks and produce local VSIX builds in the meantime.
+Use a patch release for fixes to colors, grammars or UI; a minor release for new
+palettes or features; and a major release for incompatible changes such as removing
+or renaming existing themes. Development dependency updates alone usually do not
+need an extension release.
+
+For example, to prepare the next patch from 0.1.0:
+
+```sh
+npm version patch --prefix vscode --no-git-tag-version
+npm run check
+npm run package
+git add vscode/package.json
+git commit -m "Release 0.1.1"
+git push origin main
+```
+
+After the main CI passes, create and push the matching tag:
+
+```sh
+git tag v0.1.1
+git push origin v0.1.1
+```
+
+For the initial release, the manifest already contains 0.1.0, so use `v0.1.0`
+without bumping it first. The `release` workflow in `.github/workflows/publish.yml`
+verifies the version and that the commit is in main, runs checks, builds one VSIX,
+and creates a GitHub Release with `eenei.vsix` attached. Store jobs use that same
+artifact. Release notes are generated from the merged changes.
+
+A private repository can create GitHub Releases and share VSIX files with people
+who have repository access. Registry publishing is enabled separately, after the
+repository is public so the README images and guide links are accessible.
+
+### Enable automatic store publishing
+
+1. Create the `AndreyGatsuk` publisher in Visual Studio Marketplace and/or its
+   namespace in Open VSX.
+2. Configure trusted publishing in each selected registry for GitHub owner
+   `AndreyGatsuk`, repository `eenei`, workflow `publish.yml`. Leave environment
+   empty; the workflow does not configure one. No long-lived token is required.
+3. In GitHub **Settings → Secrets and variables → Actions → Variables**, set
+   `PUBLISH_MARKETPLACE=true` and/or `PUBLISH_OPEN_VSX=true`. Both default to false.
+4. Future version tags publish automatically to the enabled registries after the
+   release build succeeds. Each registry has its own job, so a failure in one does
+   not prevent the other from publishing.
+
+To publish an existing GitHub release after enabling a registry, dispatch the
+workflow explicitly on its tag:
+
+```sh
+gh workflow run publish.yml --ref v0.1.0
+```
+
+The workflow can reattach the VSIX to an existing GitHub Release. Rerun only a
+failed store job if another registry already accepted that version. A subsequent
+release must have a new version; do not move a published release tag.
 
 ## Editor ports
 
